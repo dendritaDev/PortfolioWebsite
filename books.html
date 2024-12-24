@@ -11,18 +11,26 @@
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="css/nivo-lightbox.css">
-    <link rel="stylesheet" href="css/nivo_lightbox_themes/default/default.css">
-    <link href="css/owl.carousel.css" rel="stylesheet" media="screen">
-    <link href="css/owl.theme.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/uri.css">
 
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <style>
+.navbar-default {
+    background-color: #00a6ff !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.navbar-default.scrolled {
+    background-color: transparent !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+    </style>
 </head>
 
 <body>
-    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <nav id="menu" class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -36,78 +44,95 @@
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="index.html">About</a>
-                    </li>
-                    <li>
-                        <a href="projects.html">Projects</a>
-                    </li>
-                    <li>
-                        <a href="books.html">Books</a>
-                    </li>
-                    <li>
-                        <a href="ruta-del-cv/CV.pdf" download="CV.pdf">CV</a>
-                    </li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="ruta-del-cv/CV.pdf" download="CV.pdf">CV</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Books/Experience Section -->
-    <section id="experience">
-        <div class="container">
+    <!-- Books Section -->
+    <section id="books" style="background-color: #121212; color: #ffffff; padding-top: 80px; ">
+        <div class="container-fluid">
             <div class="section-header">
-                <h2>My Experience</h2>
-                <h5><em>Discover my professional journey and contributions</em></h5>
+                <h2 style="color: #ffffff; margin-bottom: 20px;">Books</h2>
+                <h5 style="margin-top: 40px;"><em>A collection of books and topics that inspire my work</em></h5>
                 <div class="fancy"><span></span></div>
             </div>
-        </div>
 
-        <div class="gray-bg">
-            <div class="container">
-                <div id="experience" class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="media experience">
-                            <div class="media-right media-middle">
-                                <i class="fa fa-facebook"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Facebook</h4>
-                                <h5>2011 to Present</h5>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <!-- Psychology Section -->
+            <div class="genre-section">
+                <h3 class="genre-title">Psychology</h3>
+                <div class="book-grid">
+                    <div class="book-item">
+                        <img src="img/Books/Game Analytics.jpg" alt="Book 1">
+                        <div class="book-details">
+                            <h4>Thinking, Fast and Slow</h4>
+                            <div class="topics">
+                                <span class="topic">Decision Making</span>
+                                <span class="topic">Cognitive Bias</span>
+                                <span class="topic">Decision Making</span>
+                                <span class="topic">Cognitive Bias</span>
                             </div>
                         </div>
-
-                        <div class="media experience">
-                            <div class="media-right media-middle">
-                                <i class="fa fa-google-plus"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Google Dev</h4>
-                                <h5>2007 to 2011</h5>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            </div>
-                        </div>
-
-                        <div class="media experience">
-                            <div class="media-right media-middle">
-                                <i class="fa fa-yahoo"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Yahoo Inc</h4>
-                                <h5>2004 to 2007</h5>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <div class="book-item">
+                        <img src="img/Books/Game Analytics.jpg" alt="Book 2">
+                        <div class="book-details">
+                            <h4>The Psychology of Money</h4>
+                            <div class="topics">
+                                <span class="topic">Behavioral Economics</span>
+                                <span class="topic">Finance</span>
                             </div>
                         </div>
-
-                        <div class="media experience">
-                            <div class="media-right media-middle">
-                                <i class="fa fa-linkedin"></i>
+                    </div>
+                    <div class="book-item">
+                        <img src="img/Books/Game Analytics.jpg" alt="Book 3">
+                        <div class="book-details">
+                            <h4>Influence: The Psychology of Persuasion</h4>
+                            <div class="topics">
+                                <span class="topic">Persuasion</span>
+                                <span class="topic">Marketing</span>
                             </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">LinkedIn</h4>
-                                <h5>2001 to 2004</h5>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                    </div>
+                    <div class="book-item">
+                        <img src="img/Books/Game Analytics.jpg" alt="Book 4">
+                        <div class="book-details">
+                            <h4>Emotional Intelligence</h4>
+                            <div class="topics">
+                                <span class="topic">Emotions</span>
+                                <span class="topic">Self-Awareness</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Science Section -->
+            <div class="genre-section">
+                <h3 class="genre-title">Data Science</h3>
+                <div class="book-grid">
+                    <div class="book-item">
+                        <img src="img/Books/Game Analytics.jpg" alt="Book 5">
+                        <div class="book-details">
+                            <h4>Python for Data Analysis</h4>
+                            <div class="topics">
+                                <span class="topic">Data Cleaning</span>
+                                <span class="topic">Pandas</span>
+                                <span class="topic">NumPy</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-item">
+                        <img src="img/Books/Game Analytics.jpg" alt="Book 6">
+                        <div class="book-details">
+                            <h4>Hands-On Machine Learning</h4>
+                            <div class="topics">
+                                <span class="topic">Machine Learning</span>
+                                <span class="topic">TensorFlow</span>
                             </div>
                         </div>
                     </div>
@@ -116,25 +141,29 @@
         </div>
     </section>
 
-        <!-- Footer 
-    ================================================== -->
+    <!-- Footer -->
     <section id="footer">
-        <div class="container"><!-- container -->
+        <div class="container">
             <ul class="list-inline social pull-left">
                 <li><a href="https://www.linkedin.com/in/urimartincorella/"><i class="fa fa-linkedin"></i></a></li>
-                <!-- Change # With your FB Link -->
                 <li><a href="https://github.com/dendritaDev"><i class="fa fa-github"></i></a></li>
-                <!-- Change # With your Twitter Link -->
             </ul>
-        </div><!-- end container -->
+        </div>
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.js"></script>
-    <script type="text/javascript" src="js/jquery.isotope.js"></script>
-    <script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('menu'); // Selecciona por ID
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+    </script>
 </body>
 
 </html>

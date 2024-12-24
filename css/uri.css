@@ -1,0 +1,87 @@
+
+/* Género - Sección */
+.genre-section {
+    margin-bottom: 60px; /* Separación entre secciones */
+}
+
+/* Título de Género */
+.genre-title {
+    font-size: 28px;
+    margin-bottom: 50px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #b8b8b8; /* Línea decorativa */
+    display: inline-block;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 700px)); /* Min 300px, Máx 700px */
+    gap: 20px; /* Espaciado entre elementos */
+    row-gap: 80px;
+    justify-content: center; /* Centra todos los elementos */
+    margin-top: 20px;
+    padding: 0 20px; /* Espaciado lateral */
+    align-items: start;
+}
+
+/* Forzar que los elementos en la última fila queden centrados */
+.book-grid::after {
+    content: '';
+    display: block;
+    width: 300px; /* Igual al min-width */
+}
+
+.book-item {
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #1a1a1a;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    max-width: 600px;
+    position: relative; /* Añadimos posición relativa para el contenedor */
+}
+.book-item img {
+    width: 193px;
+    height: 250px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.book-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye contenido verticalmente */
+    padding: 10px;
+    flex-grow: 1;
+    height: 270px; /* Fija la altura para igualar el tamaño de la imagen */
+}
+
+.book-details h4 {
+    margin: 0 0 10px; /* Espaciado inferior para el título */
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Espaciado entre topics */
+    padding-bottom: 10px; /* Espaciado inferior */
+    align-items: flex-end; /* Alinea los topics hacia el fondo */
+    justify-content: flex-start; /* Mantiene los topics alineados a la izquierda */
+}
+
+.topic {
+    background-color: #4e4e4e29;
+    color: #cbcbcb;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
