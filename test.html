@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nombre del Proyecto App 1</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .navbar-default {
+      background-color: #00a6ff !important;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+    }
+
+    .navbar-default.scrolled {
+      background-color: transparent !important;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .project-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .image-container {
+      width: 50%;
+      margin-right: 20px;
+    }
+
+    .image-container img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .text-container {
+      width: 50%;
+    }
+
+    .swiper-slide {
+      width: 50%;
+    }
+    .swiper-slide * {
+  user-select: text; /* Allow text selection within slides */
+}
+    .project-title-container {
+      text-align: center;
+    }
+
+    .project-title {
+      /* Style the project title */
+      font-size: 3em;
+      /* Make the title larger */
+      margin-bottom: 50px;
+      /* Add more space below the title */
+    }
+
+
+
+    .tools-used-icons {
+      display: flex;
+      justify-content: center;
+      /* Center the icons horizontally */
+      align-items: center;
+      /* Center the icons vertically */
+
+    }
+
+    .tools-used-icons img {
+      height: 50px;
+      /* Set the icon height */
+      margin: 0 10px;
+      /* Add spacing between icons */
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="ruta-del-cv/CV.pdf" download="CV.pdf">CV</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <section id="project-details" style="padding-top: 20px; padding-right: 40px;">
+    <div class="container project-title-container" style="width: 105%; padding: 100px;">
+      <h1 class="project-title">Project Title</h1>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="project-content">
+              <div class="image-container">
+                <img src="img/portfolio/01.jpg" class="img-responsive" alt="App 1 Detail 1">
+              </div>
+              <div class="text-container">
+                <h3>Project Title</h3>
+                <p>This is where your project description goes. You can add details about the project, technologies
+                  used, challenges faced, and outcomes achieved.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-content">
+              <div class="image-container">
+                <img src="img/portfolio/02.jpg" class="img-responsive" alt="App 1 Detail 2">
+              </div>
+              <div class="text-container">
+                <h3>Project Title 2</h3>
+                <p>This is where your second project description goes. You can add details about the project,
+                  technologies used, challenges faced, and outcomes achieved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+
+
+    <div class="tools-used-icons">
+      <img src="img/tools/python-icon.png" alt="Python">
+      <img src="img/tools/sql-icon.png" alt="SQL">
+      <img src="img/tools/pandas-icon.png" alt="Pandas">
+      <img src="img/tools/tableau-icon.png" alt="Tableau">
+    </div>
+
+  </section>
+
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script>
+    // Initialize Swiper for this project
+    new Swiper('.swiper-container', {
+    loop: false,
+    spaceBetween: 100, 
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    allowTouchMove: false, // Prevent touch swiping/dragging
+  });
+
+    window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('menu');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+
+</html>
