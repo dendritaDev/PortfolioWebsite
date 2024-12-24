@@ -1,53 +1,58 @@
 /* projects.css */
 
 .project-content {
-    text-align: left; 
-  }
-  
-  .project-content h4 {
-    margin-top: 0; 
-    margin-bottom: 10px; 
-  }
-  
-  .project-tags {
-    margin-top: 10px; 
-  }
-  
-  .project-tags span {
-    display: inline-block;
-    padding: 5px 10px;
-    margin: 5px;
-    background-color: #f0f0f0; 
-    border-radius: 5px;
-  }
-  
-  .nopadding {
-    padding: 0 !important; 
-    margin: 30px; 
-  }
+  text-align: left;
+}
 
-  body {
-    background-color: #121212; /* Dark background color */
-    color: #ffffff; /* White text color */
-  }
-  
-  .box {
-    background-color: #1a1a1a; /* Slightly lighter background for the boxes */
-    border: 1px solid #ddd; 
-    border-radius: 5px;
-    overflow: hidden; 
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); 
-  }
-  
-  .project-content {
-    padding: 20px; /* Add padding to the content area */
-  }
-  
-  .project-content h4 {
-    color: #ffffff; /* White title color */
-  }
-  
-  .project-tags span {
-    background-color: #ddd; /* Semi-transparent dark background for tags */
-    color: #000000; /* Light gray text color for tags */
-  }
+.project-content h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.project-tags {
+  margin-top: 10px;
+}
+
+.project-tags span {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.nopadding {
+  padding: 0 !important;
+  margin: 30px;
+}
+
+body {
+  background-color: #121212;
+  /* Dark background color */
+  color: #ffffff;
+  /* White text color */
+}
+
+.box {
+  background-color: #1a1a1a;
+  /* Slightly lighter background for the boxes */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.project-content {
+  padding: 20px;
+  /* Add padding to the content area */
+}
+
+.project-content h4 {
+  color: #ffffff;
+  /* White title color */
+}
+
+.project-tags span {
+  background-color: #4e4e4e29;
+  color: #dfdfdf;
+}

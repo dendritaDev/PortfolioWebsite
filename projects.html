@@ -18,8 +18,47 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <link rel="stylesheet" type="text/css" href="css/projects.css">
-
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
+
+    <style>
+        .navbar-default {
+            background-color: #989ea2 !important;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+        }
+
+        .navbar-default.scrolled {
+            background-color: transparent !important;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .cat li a {
+            border-color: #f0f0f0 !important;
+            /* Set the desired color for the border */
+        }
+
+        .cat li a:hover,
+        .cat li a.active {
+            background-color: #f0f0f0 !important;
+            color: #121212 !important;
+        }
+
+        /* Styles for the icons */
+        .hover-text a i {
+            border: 1px solid #f0f0f0;
+            border-radius: 5px;
+            padding: 8px;
+            transition: all 0.3s ease;
+            background-color: rgba(113, 113, 113, 0.397)!important;
+            /* Add this line */
+        }
+
+        .hover-text a:hover i {
+            background-color: #f0f0f0;
+            /* Light gray background on hover */
+            color: #121212;
+            /* Dark gray text color on hover */
+        }
+    </style>
 
 </head>
 
@@ -37,6 +76,12 @@
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="https://www.linkedin.com/in/urimartincorella/"><i class="fa fa-linkedin"
+                                style="font-size: 1.5em;"></i></a></li>
+                    <li><a href="https://github.com/dendritaDev"><i class="fa fa-github"
+                                style="font-size: 1.5em;"></i></a></li>
+                </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="index.html">About</a>
@@ -70,13 +115,16 @@
             </div>
         </div>
 
-        <div class="container-fluid">
+        <div class="container-fluid" style="margin-left: 50px;">
             <div id="itemsWork" class="row text-center">
 
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 nopadding python data-analysis">
                     <div class="box">
                         <div class="hover-bg">
                             <div class="hover-text off">
+                                <a href="test.html"><i class="fa fa-eye"></i></a>
+                                <a href="https://github.com/dendritaDev/AI-ComputerVision-Unity2"><i
+                                        class="fa fa-github"></i></a>
                                 <a href="test.html"><i class="fa fa-chain"></i></a>
                             </div>
                             <div class="project-content">
@@ -96,6 +144,9 @@
                     <div class="box">
                         <div class="hover-bg">
                             <div class="hover-text off">
+                                <a href="test.html"><i class="fa fa-eye"></i></a>
+                                <a href="https://github.com/dendritaDev/AI-ComputerVision-Unity2"><i
+                                        class="fa fa-github"></i></a>
                                 <a href="test.html"><i class="fa fa-chain"></i></a>
                             </div>
                             <div class="project-content">
@@ -114,14 +165,6 @@
         </div>
     </section>
 
-    <section id="footer">
-        <div class="container">
-            <ul class="list-inline social pull-left">
-                <li><a href="https://www.linkedin.com/in/urimartincorella/"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/dendritaDev"><i class="fa fa-github"></i></a></li>
-            </ul>
-        </div>
-    </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>

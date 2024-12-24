@@ -1,13 +1,14 @@
 
 /* Género - Sección */
 .genre-section {
-    margin-bottom: 60px; /* Separación entre secciones */
+    margin-bottom: 40px; /* Separación entre secciones */
 }
 
 /* Título de Género */
 .genre-title {
     font-size: 28px;
     margin-bottom: 50px;
+    margin-left: 50px;
     color: #ffffff;
     text-transform: uppercase;
     text-align: center;
@@ -18,12 +19,12 @@
 
 .book-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 700px)); /* Min 300px, Máx 700px */
-    gap: 20px; /* Espaciado entre elementos */
-    row-gap: 80px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 500px)); /* Min 300px, Máx 700px */
+    gap: 40px; /* Espaciado entre elementos */
+    row-gap: 40px;
     justify-content: center; /* Centra todos los elementos */
-    margin-top: 20px;
-    padding: 0 20px; /* Espaciado lateral */
+    margin-top: 0px;
+    padding: 0 0px; /* Espaciado lateral */
     align-items: start;
 }
 
@@ -79,7 +80,7 @@
 
 .topic {
     background-color: #4e4e4e29;
-    color: #cbcbcb;
+    color: #dfdfdf;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 12px;
