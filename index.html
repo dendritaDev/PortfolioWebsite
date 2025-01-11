@@ -56,6 +56,152 @@
             color: #00a6ff;
             /* Example color - you can change this */
         }
+
+        section {
+            padding-top: 30px;
+        }
+
+        section h2 {
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        /* Tarjetas de educación y skills */
+        .education-item,
+        .skill-item {
+            background-color: #1e1e1e;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .education-item h3,
+        .skill-item h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .education-item ul,
+        .skill-item ul {
+            padding-left: 20px;
+        }
+
+        .about-img {
+            max-width: 300px;
+            /* Ajusta a tu gusto */
+            height: auto;
+            /* Conserva la proporción */
+            margin-left: 210px;
+            /* Opcional, si quieres centrar */
+        }
+
+        .limited-text {
+            max-width: 1050px;
+        }
+
+        .section-with-margins {
+            padding-left: 15px;
+            /* Ajusta el valor */
+            padding-right: 15px;
+            /* Ajusta el valor */
+            margin-left: auto;
+            /* Centra el contenido */
+            margin-right: auto;
+            /* Centra el contenido */
+            max-width: 1600px;
+            /* Limita el ancho total */
+        }
+
+        /* Cursos */
+        .course-item {
+            background-color: #1e1e1e;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .course-item h4 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .course-item p {
+            margin: 0;
+            color: #989ea2;
+            font-size: 0.9rem;
+        }
+
+        .course-item a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .course-item a:hover {
+            color: #00ffe1;
+        }
+
+        .course-item .btn-course {
+            background-color: #00ffe1;
+            border: none;
+            border-radius: 3px;
+            padding: 5px 10px;
+            color: #000000;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .course-item .btn-course:hover {
+            background-color: #0085cc00;
+        }
+
+        .course-item h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            /* Convierte el texto a mayúsculas */
+            letter-spacing: 0.5px;
+            /* Opcional: añade un ligero espaciado entre letras */
+        }
+
+        .course-item {
+            border: 1px solid #303030;
+            /* Añade un borde */
+            padding: 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .course-item:hover {
+            transform: translateY(-5px);
+            /* Efecto hover */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .course-item h4 {
+            color: #00ffe1;
+            /* Destaca el título */
+        }
+
+        .course-item .btn-course {
+            background: none;
+            border: 1px solid #00ffe1;
+            color: #00ffe1;
+            transition: all 0.3s ease;
+        }
+
+        .course-item .btn-course:hover {
+            background: #00ffe1;
+            color: #000;
+        }
     </style>
 </head>
 
@@ -100,107 +246,192 @@
 
     <section id="about" style="padding-top: 80px; background-color:#121212;; ">
 
-        <div class="container" style="margin-top: 80px;">
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-1 scrollimation fade-right in">
-                    <img class="img-responsive img-circle img-center" src="img/about.jpg" alt="">
+        <div class="container-fluid" style="margin-top: 40px;">
+            <div class="row align-items-center">
+                <!-- Foto de perfil -->
+                <div class="col-md-4 text-center">
+                    <img class="img-responsive img-circle img-center about-img" src="img/about.jpg" alt="">
                 </div>
-                <div class="col-sm-6 col-sm-offset-1 scrollimation fade-left in">
-                    <h1>Hello, I am Uri!</h1>
-                    <p>Psychology Graduate with Honors 🧠
-                        <br>
-                        Final Year in Game Design & Development 🎮
-                        <br>
-                        Aspiring Game Data Analyst/Scientist 📊
-                        <br>
-                        <br>
-                        I’m currently exploring how data analytics and behavioural insights can enhance engagement,
-                        retention, and monetization in games. My focus has been on learning Python, SQL, and statistics
-                        to prepare for a career in game data, where I can combine my three passions: psychology,, games,
-                        and data.
-                    </p>
 
+                <!-- Texto -->
+                <div class="col-md-8">
+                    <h1 class="mb-4">Hello, I am Uri!</h1>
+                    <p class="limited-text">
+                        Psychology Graduate with Honors 🧠<br>
+                        Final Year in Game Design & Development 🎮<br>
+                        Aspiring Game Data Analyst/Scientist 📊<br><br>
+                        I’m currently exploring how data analytics and behavioural insights
+                        can enhance engagement, retention, and monetization in games.
+                        My focus has been on learning Python, SQL, and statistics
+                        to prepare for a career in game data, where I can combine my
+                        three passions: psychology, games, and data.
+                    </p>
                 </div>
             </div>
         </div>
-
-        <div class="fancy" style="margin-top: 40px;"><span></span></div>
-
-        <section id="education" style="background-color:#121212 ;">
-            <div class="container" style="margin-bottom: 20px; margin-top: -25px;">
-                <div class="section-header">
-                    <h2>Education</h2>
-                </div>
-                <div class="row" style="margin-top: -30px;">
-                    <div class="col-md-4">
-                        <h3>Psychology, Extraordinary Award</h3>
-                        <h4>Universitat Autònoma de Barcelona</h4>
-                        <p>Sept 2017 - June 2021</p>
-                        <ul>
-                            <li>Average Mark: 8.6</li>
-                            <li>Honors in 10 subjects</li>
-                            <li>Special award for the Bachelor's Degree in Psychology, academic year 2020-2021</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Bachelor's degree in Applied Data Science (1st year)</h3>
-                        <h4>Universitat Oberta de Catalunya</h4>
-                        <p>Sept 2019 - June 2020</p>
-                        <ul>
-                            <li>Completed only the first year</li>
-                            <li>Achieving honors in 'Introduction to Data Science'</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Bachelor's degree in Video Game Design and Development</h3>
-                        <h4>Centre de la Imatge i la Tecnologia Multimèdia | CITM (UPC)</h4>
-                        <p>Sept 2021 - June 2025</p>
-                        <ul>
-                            <li>Average Mark: 8.8</li>
-                            <li>Honors in 12 subjects</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </section>
 
         <div class="fancy"><span></span></div>
 
-        <div class="container" style="margin-bottom: 20px; margin-top: -25px;">
-            <div class="section-header">
+        <!-- SECTION EDUCATION -->
+        <section id="education">
+            <div class="container-fluid section-with-margins">
+                <h2>Education</h2>
+                <div class="row">
+                    <!-- Tarjeta 1 -->
+                    <div class="col-md-4">
+                        <div class="education-item">
+                            <h3>BSc Psychology, Extraordinary Award</h3>
+                            <h4>Autonomous University of Barcelona</h4>
+                            <p>Sept 2017 - June 2021</p>
+                            <ul>
+                                <li>Average Mark: 8.6 - Honors in 10 modules</li>
+                                <li>Special award for the Bachelor's Degree in Psychology (2020-2021)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="col-md-4">
+                        <div class="education-item">
+                            <h3>BSc Applied Data Science (1st year)</h3>
+                            <h4>Open University of Catalonia</h4>
+                            <p>Sept 2019 - June 2020</p>
+                            <ul>
+                                <li>Completed only the first year</li>
+                                <li>Honors in 'Introduction to Data Science'</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="col-md-4">
+                        <div class="education-item">
+                            <h3>BSc Video Game Design & Development</h3>
+                            <h4>Polytechnic University of Catalonia</h4>
+                            <p>Sept 2021 - June 2025</p>
+                            <ul>
+                                <li>Average Mark: 8.8</li>
+                                <li>Honors in 12 modules</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FIN EDUCATION -->
+
+        <section id="courses">
+            <div class="container-fluid section-with-margins">
+                <h2>Courses</h2>
+                <div class="row">
+                    <!-- Curso 1 -->
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <div>
+                                <h4>15 Days of SQL: The Complete SQL Masterclass</h4>
+                                <p>Institution: Udemy | Duration: 15h</p>
+                            </div>
+                            <a href="https://www.udemy.com/course/15-days-of-sql/" target="_blank"
+                                class="btn-course">View Course</a>
+                        </div>
+                    </div>
+
+                    <!-- Curso 2 -->
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <div>
+                                <h4>Inferential Statistics for Machine Learning</h4>
+                                <p>Institution: Frogames | Duration: 57h</p>
+                            </div>
+                            <a href="https://cursos.frogamesformacion.com/courses/estadistica-inferencial"
+                                target="_blank" class="btn-course">View Course</a>
+                        </div>
+                    </div>
+
+                    <!-- Curso 3 -->
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <div>
+                                <h4>Probability for Machine Learning</h4>
+                                <p>Institution: Frogames | Duration: 45h</p>
+                            </div>
+                            <a href="https://cursos.frogamesformacion.com/courses/probabilidad" target="_blank"
+                                class="btn-course">View Course</a>
+                        </div>
+                    </div>
+
+                    <!-- Curso 5 -->
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <div>
+                                <h4>Descriptive Statistics</h4>
+                                <p>Institution: Frogames | Duration: 42h</p>
+                            </div>
+                            <a href="https://cursos.frogamesformacion.com/courses/estadistica-descriptiva"
+                                target="_blank" class="btn-course">View Course</a>
+                        </div>
+                    </div>
+
+                    <!-- Curso 5 -->
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <div>
+                                <h4>Python A to Z</h4>
+                                <p>Institution: Frogames | Duration: 55h</p>
+                            </div>
+                            <a href="https://cursos.frogamesformacion.com/courses/python-az" target="_blank"
+                                class="btn-course">View Course</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION SKILLS -->
+        <section id="skills">
+            <div class="container-fluid section-with-margins">
                 <h2>My Skills</h2>
+                <div class="row">
+                    <!-- Data -->
+                    <div class="col-md-4">
+                        <div class="skill-item">
+                            <h3>Data</h3>
+                            <ul>
+                                <li>SQL</li>
+                                <li>Python</li>
+                                <li>Data Engineering basics</li>
+                                <li>Tableau, Excel</li>
+                                <li>Game KPIs</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Game Dev -->
+                    <div class="col-md-4">
+                        <div class="skill-item">
+                            <h3>Game / Backend Dev</h3>
+                            <ul>
+                                <li>Unity (C#)</li>
+                                <li>PHP Backend</li>
+                                <li>Game events: Unity → PHP → SQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Psychology -->
+                    <div class="col-md-4">
+                        <div class="skill-item">
+                            <h3>Psychology / Stats</h3>
+                            <ul>
+                                <li>Descriptive Statistics</li>
+                                <li>A/B Testing, Linear Regression, ANOVA</li>
+                                <li>Behavior Analysis, Psychometrics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row" style="margin-top: -30px;">
-                <div class="col-md-4">
-                    <h3>Data</h3>
-                    <ul>
-                        <li>SQL</li>
-                        <li>Python</li>
-                        <li>Algo de Engineering?</li>
-                        <li>Tableau, Excel</li>
-                        <li>Game KPI'S</li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h3>Game/Backend Dev.</h3>
-                    <ul>
-                        <li>Unity Game Engine - C#</li>
-                        <li>PHP Backend</li>
-                        <li>Game Events:Unity to Backend PHP - SQL</li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h3>Psychology/Statistics</h3>
-                    <ul>
-                        <li>Descriptive Statistics</li>
-                        <li>Prescritpive? Statistics: A/B, Linear Regression, ANOVA</li>
-                        <li>Behavior Analysis-Psychometrics</li>
-                        <li>Idk</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        </section>
+        <!-- FIN SKILLS -->
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

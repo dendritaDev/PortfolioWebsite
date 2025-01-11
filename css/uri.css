@@ -48,7 +48,7 @@
 }
 .book-item img {
     width: 193px;
-    height: 250px;
+    height: 260px;
     object-fit: cover;
     margin: 10px;
     border-radius: 5px;
@@ -73,7 +73,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px; /* Espaciado entre topics */
-    padding-bottom: 10px; /* Espaciado inferior */
     align-items: flex-end; /* Alinea los topics hacia el fondo */
     justify-content: flex-start; /* Mantiene los topics alineados a la izquierda */
 }
