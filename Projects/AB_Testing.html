@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A/B Testing in Candy Crush</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Bootstrap y Font Awesome (ajusta la ruta si es necesario) -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome.css" />
+
+  <!-- Tu hoja de estilos principal (ajusta la ruta si es necesario) -->
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .navbar-default {
+      background-color: #989ea2 !important;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+    }
+
+    .navbar-default.scrolled {
+      background-color: transparent !important;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* Contenedor del contenido principal */
+    #project-details {
+      padding-top: 120px;
+      /* Ajusta según la altura de tu navbar */
+      text-align: center;
+    }
+
+    .project-title {
+      font-size: 3em;
+      margin-bottom: 30px;
+    }
+
+    /* Contenedor de Swiper centrado en la página */
+    .swiper-container {
+      width: 90%;
+      /* Ajusta el porcentaje si quieres más grande o más pequeño */
+      max-width: 1400px;
+      margin: 0 auto 50px auto;
+      /* 20px de margen inferior para separar del texto cursivo */
+    }
+
+    /* Cada slide va a centrar su contenido */
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Imagen dentro de cada slide */
+    .swiper-slide img {
+      /* max-width: 100% haría que no se pase del 100% del .swiper-slide */
+      /* Si quieres que se vean aún más grandes en pantallas anchas, sube el % */
+      max-width: 110%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* Flechas de navegación de Swiper */
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #ffffff;
+      /* Flechas blancas */
+    }
+
+    /* Texto de instrucciones en cursiva debajo del carrusel */
+    .swiper-instructions {
+      font-style: italic;
+      opacity: 0.8;
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <a href="https://www.linkedin.com/in/urimartincorella/">
+              <i class="fa fa-linkedin" style="font-size: 1.5em;"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/dendritaDev">
+              <i class="fa fa-github" style="font-size: 1.5em;"></i>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../index.html">About</a></li>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="../books.html">Books</a></li>
+          <li><a href="../Oriol Martín Corella.pdf" download="CV Uri Martín Corella.pdf">CV</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Fin Navbar -->
+
+  <section id="project-details">
+    <div class="container">
+      <h1 class="project-title">A/B Testing in Candy Crush</h1>
+
+      <!-- Swiper main container -->
+      <div class="swiper-container">
+        <!-- Wrapper para las diapositivas -->
+        <!-- Wrapper para las diapositivas -->
+        <div class="swiper-wrapper">
+          <!-- Generando imágenes del 0 al 51 -->
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/0.png" alt="Slide 0"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/1.png" alt="Slide 1"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/2.png" alt="Slide 2"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/3.png" alt="Slide 3"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/4.png" alt="Slide 4"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/5.png" alt="Slide 5"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/6.png" alt="Slide 6"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/7.png" alt="Slide 7"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/8.png" alt="Slide 8"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/9.png" alt="Slide 9"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/10.png" alt="Slide 10"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/11.png" alt="Slide 11"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/12.png" alt="Slide 12"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/13.png" alt="Slide 13"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/14.png" alt="Slide 14"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/15.png" alt="Slide 15"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/16.png" alt="Slide 16"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/17.png" alt="Slide 17"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/18.png" alt="Slide 18"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/19.png" alt="Slide 19"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/20.png" alt="Slide 20"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/21.png" alt="Slide 21"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/22.png" alt="Slide 22"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/23.png" alt="Slide 23"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/24.png" alt="Slide 24"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/25.png" alt="Slide 25"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/26.png" alt="Slide 26"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/27.png" alt="Slide 27"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/28.png" alt="Slide 28"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/29.png" alt="Slide 29"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/30.png" alt="Slide 30"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/31.png" alt="Slide 31"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/32.png" alt="Slide 32"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/33.png" alt="Slide 33"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/34.png" alt="Slide 34"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/35.png" alt="Slide 35"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/36.png" alt="Slide 36"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/37.png" alt="Slide 37"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/38.png" alt="Slide 38"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/39.png" alt="Slide 39"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/40.png" alt="Slide 40"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/41.png" alt="Slide 41"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/42.png" alt="Slide 42"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/43.png" alt="Slide 43"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/44.png" alt="Slide 44"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/45.png" alt="Slide 45"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/46.png" alt="Slide 46"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/47.png" alt="Slide 47"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/48.png" alt="Slide 48"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/49.png" alt="Slide 49"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/50.png" alt="Slide 50"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/51.png" alt="Slide 51"></div>
+          <div class="swiper-slide"><img src="../img/portfolio/CandyCrushAB/52.png" alt="Slide 52"></div>
+          <div class="swiper-slide">
+            <img src="../img/portfolio/CandyCrushAB/53.gif" alt="Candy Crush GIF">
+          </div>
+
+
+        </div>
+
+
+
+      </div>
+
+      <!-- Texto en cursiva con instrucciones de uso -->
+      <p class="swiper-instructions">
+        Hover and drag to see all slides.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.js"></script>
+
+  <script>
+    // Inicializar Swiper
+    new Swiper('.swiper-container', {
+      loop: false,
+      spaceBetween: 110, // Espacio entre imágenes
+      centeredSlides: true, // Centra las imágenes en cada slide
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      // Descomenta si NO quieres permitir arrastrar con el ratón o touch:
+      // allowTouchMove: false,
+      // **💡 Cambios para mejorar la fluidez:**
+      speed: 250, // Velocidad de transición (más bajo = más rápido)
+      freeMode: true, // Permite que el usuario mueva sin "saltos"
+      freeModeMomentum: false, // Evita el efecto elástico
+      freeModeSticky: false, // Evita que se quede pegado a un slide
+
+      // Deshabilita la resistencia del arrastre para un swipe más directo
+      resistance: false,
+      resistanceRatio: 0,
+
+      // Ajustes táctiles para mejorar la experiencia en móvil y tablet
+      touchRatio: 1, // Cuánto se mueve con el dedo (1 = realista)
+      touchReleaseOnEdges: true, // Permite soltar al llegar al final
+
+    });
+
+    // Cambiar estilo de la navbar al hacer scroll
+    window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('menu');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+
+</html>
