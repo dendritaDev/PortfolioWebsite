@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Uri Martín Corella Portfolio</title>
+    <meta name="description" content="Portfolio of Uri Martín Corella, Data Analyst and Game Developer">
+    <meta name="keywords" content="portfolio, data analysis, game development, UI/UX design, educational games">
+    <meta name="author" content="Uri Martín Corella">
+
+    <link rel="shortcut icon" href="" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+    <link rel="stylesheet" href="css/nivo-lightbox.css">
+    <link rel="stylesheet" href="css/nivo_lightbox_themes/default/default.css">
+
+    <link href="css/owl.carousel.css" rel="stylesheet" media="screen">
+    <link href="css/owl.theme.css" rel="stylesheet" media="screen">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+    <link
+        href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'
+        rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+
+    <style>
+        body {
+            background-color: #121212 !important;
+            color: #ffffff;
+        }
+
+        .navbar-default {
+            background-color: #989ea2 !important;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+        }
+
+        .navbar-default.scrolled {
+            background-color: transparent !important;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .section-header h2 {
+            /* Style the section title */
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            /* Style the highlight */
+            color: #00a6ff;
+            /* Example color - you can change this */
+        }
+
+        section {
+            padding-top: 30px;
+        }
+
+        section h2 {
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        /* Tarjetas de educación y skills */
+        .education-item,
+        .skill-item {
+            background-color: #1e1e1e;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .education-item h3,
+        .skill-item h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .education-item ul,
+        .skill-item ul {
+            padding-left: 20px;
+        }
+
+        .about-img {
+            max-width: 300px;
+            /* Ajusta a tu gusto */
+            height: auto;
+            /* Conserva la proporción */
+            margin-left: 210px;
+            /* Opcional, si quieres centrar */
+        }
+
+        .limited-text {
+            max-width: 1050px;
+        }
+
+        .section-with-margins {
+            padding-left: 15px;
+            /* Ajusta el valor */
+            padding-right: 15px;
+            /* Ajusta el valor */
+            margin-left: auto;
+            /* Centra el contenido */
+            margin-right: auto;
+            /* Centra el contenido */
+            max-width: 1600px;
+            /* Limita el ancho total */
+        }
+
+        /* Cursos */
+        .course-item {
+            background-color: #1e1e1e;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .course-item h4 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .course-item p {
+            margin: 0;
+            color: #989ea2;
+            font-size: 0.9rem;
+        }
+
+        .course-item a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .course-item a:hover {
+            color: #00ffe1;
+        }
+
+        .course-item .btn-course {
+            background-color: #00ffe1;
+            border: none;
+            border-radius: 3px;
+            padding: 5px 10px;
+            color: #000000;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .course-item .btn-course:hover {
+            background-color: #0085cc00;
+        }
+
+        .course-item h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            /* Convierte el texto a mayúsculas */
+            letter-spacing: 0.5px;
+            /* Opcional: añade un ligero espaciado entre letras */
+        }
+
+        .course-item {
+            border: 1px solid #303030;
+            /* Añade un borde */
+            padding: 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .course-item:hover {
+            transform: translateY(-5px);
+            /* Efecto hover */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .course-item h4 {
+            color: #00ffe1;
+            /* Destaca el título */
+        }
+
+        .course-item .btn-course {
+            background: none;
+            border: 1px solid #00ffe1;
+            color: #00ffe1;
+            transition: all 0.3s ease;
+        }
+
+        .course-item .btn-course:hover {
+            background: #00ffe1;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="https://www.linkedin.com/in/urimartincorella/"><i class="fa fa-linkedin"
+                                style="font-size: 1.5em;"></i></a></li>
+                    <li><a href="https://github.com/dendritaDev"><i class="fa fa-github"
+                                style="font-size: 1.5em;"></i></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">About</a>
+                    </li>
+                    <li>
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <li>
+                        <a href="books.html">Books</a>
+                    </li>
+                    <li>
+                        <a href="Oriol Martín Corella.pdf" download="CV Uri Martín Corella.pdf">CV</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section id="about" style="padding-top: 80px; background-color:#121212;; ">
+
+        <div class="container-fluid" style="margin-top: 40px;">
+            <div class="row align-items-center">
+                <!-- Foto de perfil -->
+                <div class="col-md-4 text-center">
+                    <img class="img-responsive img-circle img-center about-img" src="img/about.jpg" alt="">
+                </div>
+
+                <!-- Texto -->
+                <div class="col-md-8">
+                    <h1 class="mb-4">Hello, I am Uri!</h1>
+                    <p class="limited-text">
+                        Psychology Graduate with Honors 🧠<br>
+                        Final Year in Game Design & Development 🎮<br>
+                        Aspiring Game Data Analyst/Scientist 📊<br><br>
+                        I’m currently exploring how data analytics and behavioural insights
+                        can enhance engagement, retention, and monetization in games.
+                        My focus has been on learning Python, SQL, and statistics
+                        to prepare for a career in game data, where I can combine my
+                        three passions: psychology, games, and data.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="fancy"><span></span></div>
+
+        <!-- SECTION EDUCATION -->
+        <section id="education">
+            <div class="container-fluid section-with-margins">
+                <h2>Education</h2>
+                <div class="row">
+                    <!-- Tarjeta 1 -->
+                    <div class="col-md-4">
+                        <div class="education-item">
+                            <h3>BSc Psychology, Extraordinary Award</h3>
+                            <h4>Autonomous University of Barcelona</h4>
+                            <p>Sept 2017 - June 2021</p>
+                            <ul>
+                                <li>Average Mark: 8.6 - Honors in 10 modules</li>
+                                <li>Special award for the Bachelor's Degree in Psychology (2020-2021)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="col-md-4">
+                        <div class="education-item">
+                            <h3>BSc Applied Data Science (1st year)</h3>
+                            <h4>Open University of Catalonia</h4>
+                            <p>Sept 2019 - June 2020</p>
+                            <ul>
+                                <li>Completed only the first year</li>
+                                <li>Honors in 'Introduction to Data Science'</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="col-md-4">
+                        <div class="education-item">
+                            <h3>BSc Video Game Design & Development</h3>
+                            <h4>Polytechnic University of Catalonia</h4>
+                            <p>Sept 2021 - June 2025</p>
+                            <ul>
+                                <li>Average Mark: 8.8</li>
+                                <li>Honors in 12 modules</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FIN EDUCATION -->
+
+        <section id="courses">
+            <div class="container-fluid section-with-margins">
+                <h2>Courses</h2>
+                <div class="row">
+                    <!-- Curso 1 -->
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <div>
+                                <h4>15 Days of SQL: The Complete SQL Masterclass</h4>
+                                <p>Institution: Udemy | Duration: 15h</p>
+                            </div>
+                            <a href="https://www.udemy.com/course/15-days-of-sql/" target="_blank"
+                                class="btn-course">View Course</a>
+                        </div>
+                    </div>
+
+                    <!-- Curso 2 -->
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <div>
+                                <h4>Inferential Statistics for Machine Learning</h4>
+                                <p>Institution: Frogames | Duration: 57h</p>
+                            </div>
+                            <a href="https://cursos.frogamesformacion.com/courses/estadistica-inferencial"
+                                target="_blank" class="btn-course">View Course</a>
+                        </div>
+                    </div>
+
+                    <!-- Curso 3 -->
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <div>
+                                <h4>Probability for Machine Learning</h4>
+                                <p>Institution: Frogames | Duration: 45h</p>
+                            </div>
+                            <a href="https://cursos.frogamesformacion.com/courses/probabilidad" target="_blank"
+                                class="btn-course">View Course</a>
+                        </div>
+                    </div>
+
+                    <!-- Curso 5 -->
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <div>
+                                <h4>Descriptive Statistics</h4>
+                                <p>Institution: Frogames | Duration: 42h</p>
+                            </div>
+                            <a href="https://cursos.frogamesformacion.com/courses/estadistica-descriptiva"
+                                target="_blank" class="btn-course">View Course</a>
+                        </div>
+                    </div>
+
+                    <!-- Curso 5 -->
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <div>
+                                <h4>Python A to Z</h4>
+                                <p>Institution: Frogames | Duration: 55h</p>
+                            </div>
+                            <a href="https://cursos.frogamesformacion.com/courses/python-az" target="_blank"
+                                class="btn-course">View Course</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION SKILLS -->
+        <section id="skills">
+            <div class="container-fluid section-with-margins">
+                <h2>My Skills</h2>
+                <div class="row">
+                    <!-- Data -->
+                    <div class="col-md-4">
+                        <div class="skill-item">
+                            <h3>Data</h3>
+                            <ul>
+                                <li>SQL</li>
+                                <li>Python</li>
+                                <li>Data Engineering basics</li>
+                                <li>Tableau, Excel</li>
+                                <li>Game KPIs</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Game Dev -->
+                    <div class="col-md-4">
+                        <div class="skill-item">
+                            <h3>Game / Backend Dev</h3>
+                            <ul>
+                                <li>Unity (C#)</li>
+                                <li>PHP Backend</li>
+                                <li>Game events: Unity → PHP → SQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Psychology -->
+                    <div class="col-md-4">
+                        <div class="skill-item">
+                            <h3>Psychology / Stats</h3>
+                            <ul>
+                                <li>Descriptive Statistics</li>
+                                <li>A/B Testing, Linear Regression, ANOVA</li>
+                                <li>Behavior Analysis, Psychometrics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FIN SKILLS -->
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/SmoothScroll.js"></script>
+    <script type="text/javascript" src="js/skrollr.js"></script>
+    <script type="text/javascript" src="js/imagesloaded.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.js"></script>
+    <script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
+    <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="js/contact.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('menu'); // Selecciona por ID
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
