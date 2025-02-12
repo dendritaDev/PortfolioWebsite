@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Videogames - Uri Martín Corella</title>
+    <meta name="description" content="Videogames developed by Uri Martín Corella">
+    <meta name="keywords" content="portfolio, game development, unity, data analysis">
+    <meta name="author" content="Uri Martín Corella">
+
+    <!-- Tus CSS y fonts -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/uri.css">
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+
+    <style>
+        /* ---------------------------
+       Navbar (igual a Books.html)
+    --------------------------- */
+        .navbar-default {
+            background-color: #989ea2 !important;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+        }
+
+        .navbar-default.scrolled {
+            background-color: transparent !important;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        /* ---------------------------
+       SECCIONES DE VIDEOJUEGOS
+    --------------------------- */
+        .genre-section {
+            margin-bottom: 40px;
+            /* Separación entre secciones */
+        }
+
+        .genre-title {
+            font-size: 28px;
+            margin-bottom: 50px;
+            margin-left: 50px;
+            color: #ffffff;
+            text-transform: uppercase;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #b8b8b8;
+            /* Línea decorativa */
+            display: inline-block;
+        }
+
+        /* GRID de los juegos (similar a book-grid) */
+        .game-grid {
+            display: grid;
+            /* Mínimo 300px y máximo 500px por columna, se repite automáticamente */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+            gap: 40px;
+            row-gap: 40px;
+            justify-content: center;
+            margin-top: 0px;
+            padding: 0 0px;
+            align-items: start;
+        }
+
+        .game-grid::after {
+            content: '';
+            display: block;
+            width: 300px;
+            /* Igual al min-width para forzar centrado en última fila */
+        }
+
+        /* Tarjeta de cada juego */
+        .game-item {
+            position: relative;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #1a1a1a;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+            max-width: 600px;
+            /* Para no exceder tanto */
+            overflow: hidden;
+        }
+
+        /* Contenedor para la imagen + overlay hover */
+        .hover-bg {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hover-text.off {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Al pasar el ratón por encima, aparece el icono */
+        .hover-bg:hover .hover-text.off {
+            opacity: 1;
+        }
+
+        .hover-text a i {
+            border: 1px solid #f0f0f0;
+            border-radius: 5px;
+            padding: 8px;
+            transition: all 0.3s ease;
+            background-color: rgba(113, 113, 113, 0.397) !important;
+            color: #ffffff;
+        }
+
+        .hover-text a:hover i {
+            background-color: #f0f0f0;
+            color: #121212;
+        }
+
+        .game-item img {
+            width: 100%;
+            /* Ajusta la altura según tus imágenes o usa un ratio */
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        .game-details {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .game-details h4 {
+            margin: 0;
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #ffffff;
+        }
+
+        /* Estilos generales del body */
+        body {
+            background-color: #121212;
+            /* Fondo oscuro */
+            color: #ffffff;
+            /* Texto blanco */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR (idéntica a la de Books) -->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+    
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="https://www.linkedin.com/in/urimartincorella/"><i class="fa fa-linkedin"
+                                style="font-size: 1.5em;"></i></a></li>
+                    <li><a href="https://github.com/dendritaDev"><i class="fa fa-github"
+                                style="font-size: 1.5em;"></i></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">About</a>
+                    </li>
+                    <li>
+                        <a href="projects.html">Data Projects</a>
+                    </li>
+                    <li>
+                        <a href="videogames.html">Game Projects</a>
+                    </li>
+                    <li>
+                        <a href="books.html">Books</a>
+                    </li>
+                    <li>
+                        <a href="Oriol Martín Corella.pdf" download="CV Uri Martín Corella.pdf">CV</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- SECCIÓN DE VIDEOJUEGOS -->
+    <section id="games" style="padding-top: 60px;">
+        <div class="container-fluid">
+            <div class="section-header">
+                <h2 style="color: #ffffff; margin-bottom: 20px;">Videogames</h2>
+                <h5 style="margin-top: 25px; margin-bottom: -20px;">
+                    <em>Personal Game Development Projects</em>
+                </h5>
+                <div class="fancy"><span></span></div>
+            </div>
+
+            <!-- 1. Game Jams -->
+            <div class="genre-section">
+                <h3 class="genre-title">Game Jams</h3>
+                <div class="game-grid">
+                    <!-- Mind's Resonance -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <!-- Iframe de YouTube sin hover icon -->
+                            <iframe width="100%" height="280" src="https://www.youtube.com/embed/byWXXVdL9fU?rel=0"
+                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
+                                style="border-radius: 5px;">
+                            </iframe>
+                        </div>
+
+                        <div class="game-details">
+                            <!-- Título con enlace e icono fa-link -->
+                            <h4>
+                                Mind's Resonance
+                                <a href="https://dexuxa.itch.io/minds-resonance" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                            <h7>Game Jam winners - 2023</h7>
+                            <br>
+                            <br>
+                            <h7>In Mind's Resonance, we aimed to understand the echo as the idea of internal mental
+                                echoes that individuals experience, referencing the psychological term of Rumination. In
+                                our case, we wanted to convey this through a story set in a school, where the main
+                                character experiences bullying.</h7>
+
+                        </div>
+                    </div>
+
+                    <!-- Spiral -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <iframe width="100%" height="280" src="https://www.youtube.com/embed/IIp2TTfCzic?rel=0"
+                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
+                                style="border-radius: 5px;">
+                            </iframe>
+                        </div>
+                        <div class="game-details">
+                            <h4>
+                                Spiral
+                                <a href="https://xarderos.itch.io/spiral" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                            <h7>Game Jam winners - 2025</h7>
+                            <br>
+                            <br>
+                            <h7>Have you ever felt trapped in an endless spiral? Spiral is not just a game—it’s a
+                                psychological journey into gambling addiction and the struggle to escape it.</h7>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <!-- 2. Computer Vision -->
+            <div class="genre-section">
+                <h3 class="genre-title">Computer Vision</h3>
+                <div class="game-grid">
+
+                    <!-- Proyecto 1: Contour Detection with OpenCV -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <img src="img/Games/ObjectAndPhysicsInteraction.gif" alt="Contour Detection in Unity">
+                        </div>
+                        <div class="game-details">
+                            <h4>
+                                Contour Detection with OpenCV
+                                <a href="https://github.com/dendritaDev/AI-ComputerVision-Unity" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                            <p>
+                                This C# code processes webcam images in Unity using OpenCV. It detects contours in the
+                                images,
+                                creates 2D polygons representing the contours, and allows these polygons to interact
+                                with Unity's physics system.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 2: Realtime Object Detection -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <img src="img/Games/ObjectDetection.gif" alt="Realtime Object Detection">
+                        </div>
+                        <div class="game-details">
+                            <h4>
+                                Realtime Object Detection with TensorFlow & OpenCV
+                                <a href="https://github.com/dendritaDev/AI-ComputerVision-Unity2" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                            <p>
+                                Using TensorFlow and OpenCV for real-time object detection in Unity.
+                                This project integrates deep learning models to identify and track objects via webcam
+                                input.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- 3. Personal Projects -->
+            <div class="genre-section">
+                <h3 class="genre-title">Personal Projects - Unity C#</h3>
+                <div class="game-grid">
+
+                    <!-- Hypercasual Crowd Runner -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <video autoplay loop muted playsinline
+                                style="border-radius: 5px; object-fit: cover; aspect-ratio: 16/9; display: block; margin: auto;">
+                                <source src="videos/HypercasualRunner.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+
+                        </div>
+                        <div class="game-details">
+                            <h4>
+                                Hypercasual Crowd Runner
+                                <a href="https://github.com/dendritaDev/Hyper-Casual-CrowdRunner-Unity" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Wordle Mobile -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <video autoplay loop muted playsinline
+                                style="border-radius: 5px; object-fit: cover; aspect-ratio: 16/9; display: block; margin: auto;">
+                                <source src="videos/WordFinder.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="game-details">
+                            <h4>
+                                Wordle Mobile with Ads
+                                <a href="https://github.com/dendritaDev/WordleMobileWithAds-Unity" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Hole Game -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <video autoplay loop muted playsinline
+                                style="border-radius: 5px; object-fit: cover; aspect-ratio: 16/9; display: block; margin: auto;">
+                                <source src="videos/MobileHoleGame.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="game-details">
+                            <h4>
+                                Mobile Hole Game
+                                <a href="https://github.com/dendritaDev/MobileHoleGame-Unity" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Carrot Clicker -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <video autoplay loop muted playsinline
+                                style="border-radius: 5px; object-fit: cover; aspect-ratio: 16/9; display: block; margin: auto;">
+                                <source src="videos/CarrotClicker.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="game-details">
+                            <h4>
+                                Mobile Carrot Clicker
+                                <a href="https://github.com/dendritaDev/MobileClickerGame-Unity" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- The Garden of Earthly Delights (GIF) -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <img src="videos/GardenOfDelights.gif" alt="The Garden of Earthly Delights">
+                        </div>
+                        <div class="game-details">
+                            <h4>
+                                The Garden of Earthly Delights (Roguelike)
+                                <a href="https://github.com/dendritaDev/Mobile-Roguelike" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Tower Defense -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <video width="100%" autoplay loop muted playsinline
+                                style="border-radius: 5px; object-fit: cover;">
+                                <source src="videos/TowerDefense.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="game-details">
+                            <h4>
+                                Tower Defense
+                                <a href="https://github.com/dendritaDev/Tower-Defense-Unity" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Pacman -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <video width="100%" autoplay loop muted playsinline
+                                style="border-radius: 5px; object-fit: cover;">
+                                <source src="videos/Pacman.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="game-details">
+                            <h4>
+                                Pacman
+                                <a href="https://github.com/dendritaDev/Pacman-Unity" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Fruit Ninja -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <video width="100%" autoplay loop muted playsinline
+                                style="border-radius: 5px; object-fit: cover;">
+                                <source src="videos/FruitNinja.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="game-details">
+                            <h4>
+                                Fruit Ninja
+                                <a href="https://github.com/dendritaDev/Fruit-Ninja-Unity" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Minesweeper -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <video width="100%" autoplay loop muted playsinline
+                                style="border-radius: 5px; object-fit: cover;">
+                                <source src="videos/Minesweeper.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="game-details">
+                            <h4>
+                                Minesweeper
+                                <a href="https://github.com/dendritaDev/Minesweeper-Unity" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 4. University Projects -->
+            <div class="genre-section">
+                <h3 class="genre-title">University Projects - C++, SDL</h3>
+                <div class="game-grid">
+
+                    <!-- Own Game Engine (GIF) -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <img src="img/Games/SheeeshEngine.gif" alt="Own Game Engine">
+                        </div>
+                        <div class="game-details">
+                            <h4>
+                                Own Game Engine
+                                <a href="https://urii98.github.io/SheeeshEngine/" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Timmy and the Corrupted Dreamland (MP4 Video) -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <video width=100% autoplay loop muted playsinline
+                                style="border-radius: 5px; object-fit: cover;">
+                                <source src="videos/TimmyCorruptedDreamland.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="game-details">
+                            <h4>
+                                Timmy and the Corrupted Dreamland
+                                <a href="https://timmyandthecorrupteddreamland.vercel.app/" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Windjammers (YouTube Video) -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <iframe width="100%" height="280" src="https://www.youtube.com/embed/3yeyg30Bx5c"
+                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
+                                style="border-radius: 5px;">
+                            </iframe>
+                        </div>
+                        <div class="game-details">
+                            <h4>
+                                Windjammers
+                                <a href="https://paum4.github.io/Windjammers/" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Kirby Game (Static Image) -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <img src="img/Games/KirbyGame.jpg" alt="Kirby Game">
+                        </div>
+                        <div class="game-details">
+                            <h4>
+                                Kirby Game
+                                <a href="https://github.com/Urii98/UP_GAME" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Painball (Static Image) -->
+                    <div class="game-item">
+                        <div class="hover-bg">
+                            <img src="img/Games/Painball.jpg" alt="Painball">
+                        </div>
+                        <div class="game-details">
+                            <h4>
+                                Pinball
+                                <a href="https://github.com/arinWald/Pain-Ball" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div> <!-- /.container-fluid -->
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script>
+        // Efecto navbar scrolled (igual que en Books)
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('menu');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
