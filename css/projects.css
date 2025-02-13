@@ -22,7 +22,7 @@
 }
 
 .nopadding {
-  padding: 0 !important;
+  padding: 60 !important;
   margin: 30px;
 }
 
@@ -32,6 +32,13 @@ body {
   color: #ffffff;
   /* White text color */
 }
+@media (min-width: 992px) {  /* Para pantallas grandes (lg) */
+  .col-md-3 {
+    width: 28% !important;  /* Ajusta el ancho para que entren aproximadamente 3.5 por fila */
+    margin: 1%;  /* Espaciado entre las cajas */
+  }
+}
+
 
 .box {
   background-color: #1a1a1a;
