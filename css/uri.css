@@ -47,8 +47,8 @@
     position: relative; /* Añadimos posición relativa para el contenedor */
 }
 .book-item img {
-    width: 193px;
-    height: 260px;
+    width: 144px;
+    height: 195px;
     object-fit: cover;
     margin: 10px;
     border-radius: 5px;
@@ -60,7 +60,7 @@
     justify-content: space-between; /* Distribuye contenido verticalmente */
     padding: 10px;
     flex-grow: 1;
-    height: 270px; /* Fija la altura para igualar el tamaño de la imagen */
+    height: 215px; /* Fija la altura para igualar el tamaño de la imagen */
 }
 
 .book-details h4 {
