@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uri MC — Hybrid Synthesis Design System</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="tokens.css" />
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <style>
+    #root { min-height: 100vh; }
+    .system-sticky-header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--bg-elevated); border-bottom: 1px solid var(--border-default);
+      padding: 12px 32px; display: flex; justify-content: space-between; align-items: center;
+      backdrop-filter: blur(12px);
+    }
+    .main-layout { display: flex; max-width: 1400px; margin: 0 auto; padding: 0 32px; gap: 32px; }
+    .main-content { flex: 1; min-width: 0; padding-bottom: 96px; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" src="comp/showcase.jsx"></script>
+  <script type="text/babel" src="comp/homepage.jsx"></script>
+  <script type="text/babel" src="comp/section-ab.jsx"></script>
+  <script type="text/babel" src="comp/section-cd.jsx"></script>
+  <script type="text/babel" src="comp/section-ef.jsx"></script>
+  <script type="text/babel" src="comp/section-gh.jsx"></script>
+  <script type="text/babel" src="comp/section-ij.jsx"></script>
+  <script type="text/babel" src="comp/section-klm.jsx"></script>
+
+  <script type="text/babel">
+    const REQUIRED = [
+      'ShowcaseCard','Variant','SectionHeader','ThemeToggle','TOCSidebar','useScrollSpy','BigDivider','ColorSwatch',
+      'Homepage',
+      'SectionATokens','SectionBTypography',
+      'SectionCButtons','SectionDForms',
+      'SectionENavigation','SectionFCards',
+      'SectionGDataViz','SectionHFeedback',
+      'SectionIOverlays','SectionJMedia',
+      'SectionKPortfolio','SectionLMotion','SectionMAccessibility',
+    ];
+
+    function App() {
+      const {
+        ShowcaseCard, Variant, SectionHeader, ThemeToggle, TOCSidebar, TOC_ITEMS, useScrollSpy, BigDivider, ColorSwatch,
+        Homepage,
+        SectionATokens, SectionBTypography,
+        SectionCButtons, SectionDForms,
+        SectionENavigation, SectionFCards,
+        SectionGDataViz, SectionHFeedback,
+        SectionIOverlays, SectionJMedia,
+        SectionKPortfolio, SectionLMotion, SectionMAccessibility,
+      } = window;
+
+      const [theme, setTheme] = React.useState('light');
+      const activeSection = useScrollSpy(TOC_ITEMS.map(t => t.id));
+
+      React.useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+      }, [theme]);
+
+      return (
+        <div>
+          {/* ═══ PART 1: HOMEPAGE ═══ */}
+          <Homepage />
+
+          {/* ═══ DIVIDER ═══ */}
+          <BigDivider label="Component Sheet" />
+
+          {/* ═══ PART 2: COMPONENT SHEET ═══ */}
+          <div className="system-sticky-header">
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+              <div style={{ width: 24, height: 24, background: 'var(--color-pm-blue)', borderRadius: 'var(--radius-sm)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-display)', fontSize: 12, color: '#fff' }}>U</div>
+              <span style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: 14 }}>Hybrid Synthesis</span>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)', marginLeft: 8 }}>Design System v1.0</span>
+            </div>
+            <ThemeToggle theme={theme} setTheme={setTheme} />
+          </div>
+
+          <div className="main-layout">
+            <TOCSidebar activeId={activeSection} />
+            <div className="main-content">
+              <SectionATokens />
+              <SectionBTypography />
+              <SectionCButtons />
+              <SectionDForms />
+              <SectionENavigation />
+              <SectionFCards />
+              <SectionGDataViz />
+              <SectionHFeedback />
+              <SectionIOverlays />
+              <SectionJMedia />
+              <SectionKPortfolio />
+              <SectionLMotion />
+              <SectionMAccessibility />
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function mountWhenReady() {
+      if (REQUIRED.every(k => typeof window[k] === 'function')) {
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+      } else {
+        setTimeout(mountWhenReady, 80);
+      }
+    }
+    mountWhenReady();
+  </script>
+</body>
+</html>

@@ -2,500 +2,387 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Uri Martín Corella Portfolio</title>
-
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7PHX8C54H"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-Z7PHX8C54H');
-    </script>
-
-    <meta name="description" content="Portfolio of Uri Martín Corella, Data Analyst and Game Developer">
-    <meta name="keywords" content="portfolio, data analysis, game development, UI/UX design, educational games">
-    <meta name="author" content="Uri Martín Corella">
-
-    <link rel="shortcut icon" href="" type="image/x-icon">
-
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
-
-    <link rel="stylesheet" href="css/nivo-lightbox.css">
-    <link rel="stylesheet" href="css/nivo_lightbox_themes/default/default.css">
-
-    <link href="css/owl.carousel.css" rel="stylesheet" media="screen">
-    <link href="css/owl.theme.css" rel="stylesheet" media="screen">
-
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
-
-    <link
-        href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'
-        rel='stylesheet' type='text/css'>
-
-    <script type="text/javascript" src="js/modernizr.custom.js"></script>
-
-    <style>
-        body {
-            background-color: #121212 !important;
-            color: #ffffff;
-        }
-
-        .navbar-default {
-            background-color: #989ea2 !important;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
-        }
-
-        .navbar-default.scrolled {
-            background-color: transparent !important;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-        }
-
-        .section-header h2 {
-            /* Style the section title */
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
-
-        .highlight {
-            /* Style the highlight */
-            color: #00a6ff;
-            /* Example color - you can change this */
-        }
-
-        section {
-            padding-top: 30px;
-        }
-
-        section h2 {
-            margin-bottom: 30px;
-            font-weight: 700;
-        }
-
-        /* Tarjetas de educación y skills */
-        .education-item,
-        .skill-item {
-            background-color: #1e1e1e;
-            border-radius: 5px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .education-item h3,
-        .skill-item h3 {
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        .education-item ul,
-        .skill-item ul {
-            padding-left: 20px;
-        }
-
-        .about-img {
-            max-width: 300px;
-            /* Ajusta a tu gusto */
-            height: auto;
-            /* Conserva la proporción */
-            margin-left: 210px;
-            /* Opcional, si quieres centrar */
-        }
-
-        .limited-text {
-            max-width: 1050px;
-        }
-
-        .section-with-margins {
-            padding-left: 15px;
-            /* Ajusta el valor */
-            padding-right: 15px;
-            /* Ajusta el valor */
-            margin-left: auto;
-            /* Centra el contenido */
-            margin-right: auto;
-            /* Centra el contenido */
-            max-width: 1600px;
-            /* Limita el ancho total */
-        }
-
-        /* Cursos */
-        .course-item {
-            background-color: #1e1e1e;
-            border-radius: 5px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .course-item h4 {
-            margin: 0;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .course-item p {
-            margin: 0;
-            color: #989ea2;
-            font-size: 0.9rem;
-        }
-
-        .course-item a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        .course-item a:hover {
-            color: #00ffe1;
-        }
-
-        .course-item .btn-course {
-            background-color: #00ffe1;
-            border: none;
-            border-radius: 3px;
-            padding: 5px 10px;
-            color: #000000;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .course-item .btn-course:hover {
-            background-color: #0085cc00;
-        }
-
-        .course-item h4 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-            /* Convierte el texto a mayúsculas */
-            letter-spacing: 0.5px;
-            /* Opcional: añade un ligero espaciado entre letras */
-        }
-
-        .course-item {
-            border: 1px solid #303030;
-            /* Añade un borde */
-            padding: 15px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .course-item:hover {
-            transform: translateY(-5px);
-            /* Efecto hover */
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .course-item h4 {
-            color: #00ffe1;
-            /* Destaca el título */
-        }
-
-        .course-item .btn-course {
-            background: none;
-            border: 1px solid #00ffe1;
-            color: #00ffe1;
-            transition: all 0.3s ease;
-        }
-
-        .course-item .btn-course:hover {
-            background: #00ffe1;
-            color: #000;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uri Martin Corella Portfolio</title>
+  <meta name="description" content="Portfolio of Uri Martin Corella, Data Analyst and Game Developer">
+  <meta name="keywords" content="portfolio, data analysis, game development, UI/UX design, educational games">
+  <meta name="author" content="Uri Martin Corella">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="css/hybrid-refactor.css">
 </head>
 
 <body>
-    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-left">
-                    <li><a href="https://www.linkedin.com/in/urimartincorella/"><i class="fa fa-linkedin"
-                                style="font-size: 1.5em;"></i></a></li>
-                    <li><a href="https://github.com/dendritaDev"><i class="fa fa-github"
-                                style="font-size: 1.5em;"></i></a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="index.html">About</a>
-                    </li>
-                    <li>
-                        <a href="projects.html">Data Projects</a>
-                    </li>
-                    <li>
-                        <a href="videogames.html">Games/Apps</a>
-                    </li>
-                    <li>
-                        <a href="books.html">Books</a>
-                    </li>
-                    <li>
-                        <a href="Oriol Martín Corella.pdf" download="CV Uri Martín Corella.pdf">CV</a>
-                    </li>
-                </ul>
-            </div>
+  <div class="site-shell">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <div class="nav-inner">
+        <a class="brand" href="index.html"><img class="brand-mark" src="img/brain.png" alt="" aria-hidden="true"><span>Uri MC</span></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-label="Toggle navigation" aria-expanded="false">+</button>
+        <div class="social-links" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/urimartincorella/" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          <a href="https://github.com/dendritaDev" aria-label="GitHub"><i class="fa fa-github"></i></a>
         </div>
+        <div class="nav-links">
+          <a href="index.html" aria-current="page">About</a>
+          <a href="projects.html">Data Projects</a>
+          <a href="videogames.html">Games/Apps</a>
+          <a href="books.html">Books</a>
+          <a href="linkedin/CV%20Oriol%20Mart%C3%ADn%20Corella.pdf" download="CV Oriol Martín Corella.pdf">CV</a>
+        </div>
+      </div>
     </nav>
 
-
-    <section id="about" style="padding-top: 80px; background-color:#121212;; ">
-
-        <div class="container-fluid" style="margin-top: 40px;">
-            <div class="row align-items-center">
-                <!-- Foto de perfil -->
-                <div class="col-md-4 text-center">
-                    <img class="img-responsive img-circle img-center about-img" src="img/about.jpg" alt="">
-                </div>
-
-                <!-- Texto -->
-                <div class="col-md-8">
-                    <h1 class="mb-4">Hello, I am Uri!</h1>
-                    <p class="limited-text">
-                        Psychology Graduate with Honors 🧠<br>
-                        Final Year in Game Design & Development 🎮<br>
-                        Aspiring Product Analyst or Data Analyst 📊<br><br>
-                        
-                        I’m passionate about understanding human behavior through data. My journey into data analysis began with psychology, where 
-                        I explored how quantitative methods can provide insights into motivation and decision-making. My Bachelor's Thesis, "Predicting 
-                        Workplace Motivation Levels Using Linear Regression - A Self-Determination Theory Approach," was my first deep dive into applying data 
-                        analysis/science techniques to behavioral data. <br><br>
-
-                        Currently, I’m exploring how data analytics and behavioral insights can drive better decision-making in digital products, UX/UI and 
-                        experiences. I’ve been developing my skills in Python, SQL, and statistics to combine my three passions: psychology, software, and data.
-                        
-
-                    </p>
-                </div>
-            </div>
+    <main class="page-main">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Product Data Analyst / Software Developer / Psychologist</p>
+          <div class="pill-row" aria-label="Profile disciplines">
+            <span class="pill">Product</span>
+            <span class="pill ochre">Psychology</span>
+            <span class="pill green">Experimentation</span>
+            <span class="pill purple">Software</span>
+          </div>
+          <h1>Hello, I am Uri!</h1>
+          <p class="lead">
+            Product-minded Data Analyst with a background in Psychology and Software Development, focused on experimentation, AI-enabled workflows and user behavior.
+          </p>
+          <p class="lead">
+            I combine product analytics, behavioral science and technical execution to help teams understand user problems, evaluate opportunities and make better product decisions.
+          </p>
+          <p class="lead">
+            My work sits at the intersection of data, product, AI and UX: from A/B testing and exploratory analysis to internal tools, automation workflows and game/app prototypes.
+          </p>
+          <p class="lead">
+            I am especially interested in product roles where data, user understanding, experimentation and AI can be used to build better digital experiences.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="projects.html">View product data projects</a>
+            <a class="button secondary" href="videogames.html">View games/apps</a>
+            <a class="button secondary" href="linkedin/CV%20Oriol%20Mart%C3%ADn%20Corella.pdf" download="CV Oriol Martín Corella.pdf">Download CV</a>
+          </div>
         </div>
-
-        <div class="fancy"><span></span></div>
-
-        <!-- SECTION EDUCATION -->
-        <section id="education">
-            <div class="container-fluid section-with-margins">
-                <h2>Education</h2>
-                <div class="row">
-                    <!-- Tarjeta 1 -->
-                    <div class="col-md-4">
-                        <div class="education-item">
-                            <h3>BSc Psychology, Extraordinary Award</h3>
-                            <h4>Autonomous University of Barcelona</h4>
-                            <p>Sept 2017 - June 2021</p>
-                            <ul>
-                                <li>Average Mark: 8.6</li>
-                                <li>Honors in 10 modules</li>
-                                <li>Special award for the Bachelor's Degree in Psychology (2020-2021)</li>
-                                <li>Bachelor's Thesis: Predicting Workplace Motivation Levels Using Linear Regression - A Self-Determination Theory Approach</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Tarjeta 2 -->
-                    <div class="col-md-4">
-                        <div class="education-item">
-                            <h3>BSc Applied Data Science (1st year)</h3>
-                            <h4>Open University of Catalonia</h4>
-                            <p>Sept 2019 - June 2020</p>
-                            <ul>
-                                <li>Completed only the first year</li>
-                                <li>Honors in 'Introduction to Data Science'</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Tarjeta 3 -->
-                    <div class="col-md-4">
-                        <div class="education-item">
-                            <h3>BSc Video Game Design & Development</h3>
-                            <h4>Polytechnic University of Catalonia</h4>
-                            <p>Sept 2021 - June 2025</p>
-                            <ul>
-                                <li>Average Mark: 8.8</li>
-                                <li>Honors in 12 modules</li>
-                                <li>Bachelor's Thesis: Developing a therapeutic videogame in collaboration with NGO Pallapupas to reduce preoperative anxiety in 
-                                    pediatric patients. Responsible for game development, backend implementation, and a scientific evaluation 
-                                    using A/B testing to measure its effectiveness and linear regression analysis to identify key gameplay variables (e.g., playtime, success rate) 
-                                    that influence anxiety reduction.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <aside class="profile-panel">
+          <div class="portrait-card">
+            <img src="img/about.jpg" alt="Uri Martin Corella portrait">
+          </div>
+          <div class="data-card">
+            <div class="mono-label">Profile data</div>
+            <div class="bar-list">
+              <div class="bar-row"><span class="bar-label product"><i class="fa fa-compass" aria-hidden="true"></i>Product</span><span class="bar-track"><span class="bar-fill product"></span></span></div>
+              <div class="bar-row"><span class="bar-label data"><i class="fa fa-bar-chart" aria-hidden="true"></i>Data</span><span class="bar-track"><span class="bar-fill data"></span></span></div>
+              <div class="bar-row"><span class="bar-label psychology"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>Psychology</span><span class="bar-track"><span class="bar-fill psychology"></span></span></div>
+              <div class="bar-row"><span class="bar-label software"><i class="fa fa-code" aria-hidden="true"></i>Software</span><span class="bar-track"><span class="bar-fill software"></span></span></div>
             </div>
-        </section>
-        <!-- FIN EDUCATION -->
+          </div>
+        </aside>
+      </section>
 
-        <section id="courses">
-            <div class="container-fluid section-with-margins">
-                <h2>Courses</h2>
-                <div class="row">
-                    <!-- Curso 1 -->
-                    <div class="col-md-6">
-                        <div class="course-item">
-                            <div>
-                                <h4>15 Days of SQL: The Complete SQL Masterclass</h4>
-                                <p>Institution: Udemy | Duration: 15h</p>
-                            </div>
-                            <a href="https://www.udemy.com/course/15-days-of-sql/" target="_blank"
-                                class="btn-course">View Course</a>
-                        </div>
-                    </div>
-
-                    <!-- Curso 2 -->
-                    <div class="col-md-6">
-                        <div class="course-item">
-                            <div>
-                                <h4>Inferential Statistics for Machine Learning</h4>
-                                <p>Institution: Frogames | Duration: 57h</p>
-                            </div>
-                            <a href="https://cursos.frogamesformacion.com/courses/estadistica-inferencial"
-                                target="_blank" class="btn-course">View Course</a>
-                        </div>
-                    </div>
-
-                    <!-- Curso 3 -->
-                    <div class="col-md-6">
-                        <div class="course-item">
-                            <div>
-                                <h4>Probability for Machine Learning</h4>
-                                <p>Institution: Frogames | Duration: 45h</p>
-                            </div>
-                            <a href="https://cursos.frogamesformacion.com/courses/probabilidad" target="_blank"
-                                class="btn-course">View Course</a>
-                        </div>
-                    </div>
-
-                    <!-- Curso 5 -->
-                    <div class="col-md-6">
-                        <div class="course-item">
-                            <div>
-                                <h4>Descriptive Statistics</h4>
-                                <p>Institution: Frogames | Duration: 42h</p>
-                            </div>
-                            <a href="https://cursos.frogamesformacion.com/courses/estadistica-descriptiva"
-                                target="_blank" class="btn-course">View Course</a>
-                        </div>
-                    </div>
-
-                    <!-- Curso 5 -->
-                    <div class="col-md-6">
-                        <div class="course-item">
-                            <div>
-                                <h4>Python A to Z</h4>
-                                <p>Institution: Frogames | Duration: 55h</p>
-                            </div>
-                            <a href="https://cursos.frogamesformacion.com/courses/python-az" target="_blank"
-                                class="btn-course">View Course</a>
-                        </div>
-                    </div>
-
-                     <!-- Curso 6 -->
-                     <div class="col-md-6">
-                        <div class="course-item">
-                            <div>
-                                <h4> 15 days of Power BI - Complete Power BI Bootcamp</h4>
-                                <p>Institution: Udemy | Duration: 15h</p>
-                            </div>
-                            <a href="https://www.udemy.com/course/15-days-of-power-bi/" target="_blank"
-                                class="btn-course">View Course</a>
-                        </div>
-                    </div>
-                </div>
+      <section class="section-band" id="experience">
+        <div class="section-head">
+          <div>
+            <p class="kicker">A / Experience</p>
+            <h2>Professional work</h2>
+          </div>
+          <p>Recent work across product analytics, experimentation, AI-enabled internal tools, product discovery support, game development, AR/VR applications and quantitative behavioral research.</p>
+        </div>
+        <div class="experience-list">
+          <article class="experience-item is-current">
+            <div class="experience-date">
+              <span>Apr 2025 - Present</span>
+              <strong>Current</strong>
             </div>
-        </section>
-
-
-        <!-- SECTION SKILLS -->
-        <section id="skills">
-            <div class="container-fluid section-with-margins">
-                <h2>My Skills</h2>
-                <div class="row">
-                    <!-- Data -->
-                    <div class="col-md-4">
-                        <div class="skill-item">
-                            <h3>Data</h3>
-                            <ul>
-                                <li>SQL</li>
-                                <li>Python</li>
-                                <li>Excel</li>
-                                <li>PowerBI</li>
-                                <li>Game KPIs</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Game Dev -->
-                    <div class="col-md-4">
-                        <div class="skill-item">
-                            <h3>Game / Backend Dev</h3>
-                            <ul>
-                                <li>Unity (C#)</li>
-                                <li>PHP Backend</li>
-                                <li>Game events: Unity → PHP → SQL</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Psychology -->
-                    <div class="col-md-4">
-                        <div class="skill-item">
-                            <h3>Psychology / Stats</h3>
-                            <ul>
-                                <li>Descriptive Statistics</li>
-                                <li>A/B Testing, Linear/Logistic Regression, ANOVA</li>
-                                <li>Behavior Analysis, Psychometrics</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="experience-body">
+              <h3>Product Data Analyst</h3>
+              <p class="experience-company">eDreams ODIGEO · Experiments & Insights Team - Customer Experience Vertical</p>
+              <p>Focused on A/B test analysis, GA4 tracking definition, exploratory analysis and internal tooling to support product decisions.</p>
+              <ul class="clean-list">
+                <li>Built CX Gemini, an AI co-pilot connected to BigQuery, Google Sheets and Vertex AI/Gemini that generates consistent A/B test narratives in seconds and reduces manual analysis time.</li>
+                <li>Developed a self-service Paired Test tool using Google Sheets, Python and Cloud Functions to run quasi-experimental pre/post analysis when classic A/B testing is not feasible.</li>
+                <li>Architected a CX Exploratory Tool that generates optimized dynamic SQL for BigQuery, helping stakeholders answer recurring product and CX questions without depending on ad-hoc analyst support.</li>
+                <li>Built internal tools for event tracking governance, search and tracking digitalization, transforming scattered documentation into structured, queryable datasets.</li>
+                <li>Helped enable AI agent workflows within the team by defining setup standards, shared methodology and secure BigQuery access patterns for analytics use cases.</li>
+              </ul>
+              <div class="tag-list">
+                <span class="tag green">BigQuery</span>
+                <span class="tag green">Python</span>
+                <span class="tag">GA4</span>
+                <span class="tag">Vertex AI</span>
+                <span class="tag">React</span>
+                <span class="tag">A/B Testing</span>
+              </div>
             </div>
-        </section>
-        <!-- FIN SKILLS -->
-    </section>
+          </article>
+          <article class="experience-item is-current">
+            <div class="experience-date">
+              <span>Sep 2025 - Present</span>
+              <strong>Current</strong>
+            </div>
+            <div class="experience-body">
+              <h3>Product Manager & UI Developer</h3>
+              <p class="experience-company">Gatoli · Game Studio Project / Barcelona, Spain</p>
+              <p>Working on product direction and UI implementation for a game studio context, combining player experience, feature definition, Figma prototyping and Unity/C# development.</p>
+              <ul class="clean-list">
+                <li>Defined product and UX direction for game features, translating ideas into user flows, UI screens and implementation requirements.</li>
+                <li>Designed interface concepts in Figma and implemented UI systems in Unity using C#.</li>
+                <li>Combined player experience, technical feasibility and product thinking to prioritize features and improve the game experience.</li>
+              </ul>
+              <div class="tag-list">
+                <span class="tag">Product Management</span>
+                <span class="tag">ClickUp</span>
+                <span class="tag purple">Unity</span>
+                <span class="tag">Figma</span>
+                <span class="tag purple">C#</span>
+              </div>
+            </div>
+          </article>
+          <article class="experience-item">
+            <div class="experience-date">
+              <span>Feb 2024 - Apr 2025</span>
+            </div>
+            <div class="experience-body">
+              <h3>Unity Developer & Data Analyst</h3>
+              <p class="experience-company">DRACMA 3D SL · Barcelona, Spain</p>
+              <p>Developed AR industrial applications and serious games using Unity, C# and Vuforia, while building the data layer around user interaction analytics.</p>
+              <ul class="clean-list">
+                <li>Used Python and PostgreSQL for data processing, analysis and insight generation.</li>
+                <li>Designed backend systems with PHP and SQL, including authentication, storage and integrations with Salesforce and Zapier.</li>
+                <li>Built CMS tools, behavior tracking systems and Power BI reporting for stakeholders.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="experience-item">
+            <div class="experience-date">
+              <span>Oct 2023 - Feb 2024</span>
+            </div>
+            <div class="experience-body">
+              <h3>Unreal Programmer VR/AR/MR - Internship</h3>
+              <p class="experience-company">SEAT, S.A.</p>
+              <p>VR/AR/MR interactive applications for the automotive industry, working with Nanite, graphic optimization, Nvidia DLSS, Varjo XR-3, HTC Vive Pro and Unreal Engine 5.3 C++.</p>
+            </div>
+          </article>
+          <article class="experience-item">
+            <div class="experience-date">
+              <span>Oct 2023 - Feb 2024</span>
+            </div>
+            <div class="experience-body">
+              <h3>Playtester</h3>
+              <p class="experience-company">Giiku Games GmbH · Barcelona, Spain</p>
+            </div>
+          </article>
+          <article class="experience-item">
+            <div class="experience-date">
+              <span>Sep 2019 - Jan 2020</span>
+            </div>
+            <div class="experience-body">
+              <h3>Quantitative Psychology Researcher - Internship</h3>
+              <p class="experience-company">BeUpFlow · Startup</p>
+            </div>
+          </article>
+        </div>
+      </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.js"></script>
-    <script type="text/javascript" src="js/SmoothScroll.js"></script>
-    <script type="text/javascript" src="js/skrollr.js"></script>
-    <script type="text/javascript" src="js/imagesloaded.js"></script>
-    <script type="text/javascript" src="js/jquery.isotope.js"></script>
-    <script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
-    <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
-    <script type="text/javascript" src="js/contact.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script>
-        window.addEventListener('scroll', function () {
-            const navbar = document.getElementById('menu'); // Selecciona por ID
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
+      <section class="section-band" id="education">
+        <div class="section-head">
+          <div>
+            <p class="kicker">B / Education</p>
+            <h2>Academic path</h2>
+          </div>
+          <p>Psychology, applied data science and video game development form the academic base behind my product analytics work.</p>
+        </div>
+        <div class="experience-list education-list">
+          <article class="experience-item is-completed">
+            <div class="experience-date">
+              <span>Sept 2021 - June 2025</span>
+            </div>
+            <div class="experience-body">
+              <h3>Bachelor's degree in Computer Science and Video Game Development</h3>
+              <p class="experience-company">Centre de la Imatge i la Tecnologia Multimedia | CITM (UPC)</p>
+              <ul class="clean-list">
+                <li>Average Mark: 8.8</li>
+                <li>Honors in 12 modules</li>
+                <li>Bachelor's Thesis: therapeutic videogame in collaboration with Pallapupas to reduce preoperative anxiety in pediatric patients.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="experience-item is-completed">
+            <div class="experience-date">
+              <span>Sept 2019 - June 2020</span>
+            </div>
+            <div class="experience-body">
+              <h3>Bachelor's degree in Applied Data Science</h3>
+              <p class="experience-company">Universitat Oberta de Catalunya</p>
+              <ul class="clean-list">
+                <li>Completed only the first year</li>
+                <li>Honors in 'Introduction to Data Science'</li>
+              </ul>
+            </div>
+          </article>
+          <article class="experience-item is-completed">
+            <div class="experience-date">
+              <span>Sept 2017 - June 2021</span>
+            </div>
+            <div class="experience-body">
+              <h3>Psychology, Extraordinary Award</h3>
+              <p class="experience-company">Universitat Autonoma de Barcelona</p>
+              <ul class="clean-list">
+                <li>Average Mark: 8.6</li>
+                <li>Honors in 10 modules</li>
+                <li>Special award for the Bachelor's Degree in Psychology (2020-2021)</li>
+                <li>Bachelor's Thesis: Predicting Workplace Motivation Levels Using Linear Regression - A Self-Determination Theory Approach</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
 
-    </script>
+      <section class="section-band" id="courses">
+        <div class="section-head">
+          <div>
+            <p class="kicker">C / Courses</p>
+            <h2>Applied training</h2>
+          </div>
+          <p>Courses focused on statistics, SQL, Python and BI tooling for product and behavioral analytics.</p>
+        </div>
+        <div class="filters" aria-label="Course filters">
+          <button class="filter-button is-active" type="button" data-filter="all" data-filter-group="courses">All</button>
+          <button class="filter-button" type="button" data-filter="data" data-filter-group="courses">Data</button>
+          <button class="filter-button" type="button" data-filter="software" data-filter-group="courses">Software</button>
+          <button class="filter-button" type="button" data-filter="product" data-filter-group="courses">Product</button>
+        </div>
+        <div class="course-list" data-filter-scope="courses">
+          <article class="course-row course-product" data-tags="product">
+            <div><h3>Master Product Management by building a Product</h3></div>
+            <a class="button secondary" href="https://www.udemy.com/certificate/UC-320b1ac8-467c-4e6b-8e96-df15a5a9f92d/" target="_blank" aria-label="Open course"></a>
+          </article>
+          <article class="course-row course-data" data-tags="data software">
+            <div><h3>Machine Learning: Data Science with Python</h3></div>
+            <a class="button secondary" href="https://cursos.frogamesformacion.com/courses/machine-learning-python" target="_blank" aria-label="Open course"></a>
+          </article>
+          <article class="course-row course-data" data-tags="data">
+            <div><h3>The Advanced SQL Server Masterclass For Data Analysis</h3></div>
+            <a class="button secondary" href="https://www.udemy.com/certificate/UC-fc4320fa-d087-460f-9821-26309410ec54/" target="_blank" aria-label="Open course"></a>
+          </article>
+          <article class="course-row course-software" data-tags="software data">
+            <div><h3>Developing AI Applications with Python and Flask</h3></div>
+            <a class="button secondary" href="https://www.coursera.org/account/accomplishments/verify/7SP1KZ2IBURB" target="_blank" aria-label="Open course"></a>
+          </article>
+          <article class="course-row course-software" data-tags="software">
+            <div><h3>Frontend Development using React</h3></div>
+            <a class="button secondary" href="https://www.coursera.org/account/accomplishments/verify/DN0DI7DK5BJV" target="_blank" aria-label="Open course"></a>
+          </article>
+          <article class="course-row course-product" data-tags="product software">
+            <div><h3>Prototypes in Figma: Creating an Initial Low Fidelity Design</h3></div>
+            <a class="button secondary" href="https://www.coursera.org/account/accomplishments/verify/G4EUVAV35H5L" target="_blank" aria-label="Open course"></a>
+          </article>
+          <article class="course-row course-product" data-tags="product data software">
+            <div><h3>eDO AI Foundations</h3></div>
+            <a class="button secondary" href="https://www.coursera.org/account/accomplishments/verify/GE9PVAIQSHJA" target="_blank" aria-label="Open course"></a>
+          </article>
+          <article class="course-row course-data" data-tags="data product">
+            <div><h3>15 days of Power BI - Complete Microsoft Power BI Bootcamp</h3></div>
+            <a class="button secondary" href="https://www.udemy.com/course/15-days-of-power-bi/" target="_blank" aria-label="Open course"></a>
+          </article>
+          <article class="course-row course-data" data-tags="data">
+            <div><h3>15 Days of SQL: The Complete SQL Masterclass 2024 (14h)</h3></div>
+            <a class="button secondary" href="https://www.udemy.com/course/15-days-of-sql/" target="_blank" aria-label="Open course"></a>
+          </article>
+          <article class="course-row course-data" data-tags="data">
+            <div><h3>Inferential Statistics for Machine Learning and Big Data with Python (57h)</h3></div>
+            <a class="button secondary" href="https://cursos.frogamesformacion.com/courses/estadistica-inferencial" target="_blank" aria-label="Open course"></a>
+          </article>
+          <article class="course-row course-data" data-tags="data">
+            <div><h3>Probability for Machine Learning and Big Data with Python (45h)</h3></div>
+            <a class="button secondary" href="https://cursos.frogamesformacion.com/courses/probabilidad" target="_blank" aria-label="Open course"></a>
+          </article>
+          <article class="course-row course-data" data-tags="data">
+            <div><h3>Linear Algebra with Python (41h)</h3></div>
+            <a class="button secondary" href="https://cursos.frogamesformacion.com/courses/algebra-lineal" target="_blank" aria-label="Open course"></a>
+          </article>
+          <article class="course-row course-data" data-tags="data">
+            <div><h3>Descriptive Statistics (42h)</h3></div>
+            <a class="button secondary" href="https://cursos.frogamesformacion.com/courses/estadistica-descriptiva" target="_blank" aria-label="Open course"></a>
+          </article>
+          <article class="course-row course-data" data-tags="data software">
+            <div><h3>Python A to Z (55h)</h3></div>
+            <a class="button secondary" href="https://cursos.frogamesformacion.com/courses/python-az" target="_blank" aria-label="Open course"></a>
+          </article>
+        </div>
+      </section>
 
+      <section class="section-band" id="skills">
+        <div class="section-head">
+          <div>
+            <p class="kicker">D / Skills</p>
+            <h2>Skill matrix</h2>
+          </div>
+          <p>Practical skills grouped around product analytics, experimentation, AI-assisted workflows, behavioral insight and interactive systems.</p>
+        </div>
+        <div class="capability-map" aria-label="Skill matrix by discipline and use">
+          <div class="capability-header" aria-hidden="true">
+            <span></span>
+            <span>Data</span>
+            <span>Product</span>
+            <span>Software</span>
+            <span>Behavior</span>
+          </div>
+          <article class="capability-row">
+            <div class="capability-title">
+              <span>01</span>
+              <h3>Measure</h3>
+              <p>Tracking, metrics and data visibility.</p>
+            </div>
+            <div class="skill-cell skill-cell-data">SQL / BigQuery<br>GA4 & event tracking</div>
+            <div class="skill-cell skill-cell-product">Looker / Power BI<br>GA4 & event tracking</div>
+            <div class="skill-cell skill-cell-software">Python<br>Apps Script / Vertex AI</div>
+            <div class="skill-cell skill-cell-behavior">Psychometrics<br>Behavior analysis</div>
+          </article>
+          <article class="capability-row">
+            <div class="capability-title">
+              <span>02</span>
+              <h3>Experiment</h3>
+              <p>Testing changes and interpreting evidence.</p>
+            </div>
+            <div class="skill-cell skill-cell-data">SQL / BigQuery<br>Python</div>
+            <div class="skill-cell skill-cell-product">A/B testing<br>GA4 & event tracking</div>
+            <div class="skill-cell skill-cell-software">Python<br>Apps Script / Vertex AI</div>
+            <div class="skill-cell skill-cell-behavior">Regression / ANOVA<br>Behavior analysis</div>
+          </article>
+          <article class="capability-row">
+            <div class="capability-title">
+              <span>03</span>
+              <h3>Build</h3>
+              <p>Implementation skills connected to dashboards, tools and games.</p>
+            </div>
+            <div class="skill-cell skill-cell-data">Looker / Power BI<br>SQL / BigQuery</div>
+            <div class="skill-cell skill-cell-product">UX / Figma<br>GA4 & event tracking</div>
+            <div class="skill-cell skill-cell-software">Unity / C#<br>React / JavaScript</div>
+            <div class="skill-cell skill-cell-behavior">UX / Figma<br>Psychometrics</div>
+          </article>
+          <article class="capability-row">
+            <div class="capability-title">
+              <span>04</span>
+              <h3>Explain</h3>
+              <p>Communicating analysis and product implications.</p>
+            </div>
+            <div class="skill-cell skill-cell-data">Looker / Power BI<br>Python</div>
+            <div class="skill-cell skill-cell-product">A/B testing<br>GA4 & event tracking</div>
+            <div class="skill-cell skill-cell-software">React / JavaScript<br>Apps Script / Vertex AI</div>
+            <div class="skill-cell skill-cell-behavior">Behavior analysis<br>Regression / ANOVA</div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Uri Martin Corella</span>
+      <span>Product analytics, psychology and game design portfolio.</span>
+    </footer>
+  </div>
+
+  <script src="js/hybrid-site.js"></script>
 </body>
 
 </html>

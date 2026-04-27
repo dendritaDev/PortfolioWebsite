@@ -4,537 +4,212 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>In-Engine Analytics & Visualization Custom Tools</title>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7PHX8C54H"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-Z7PHX8C54H');
-  </script>
-
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome.css">
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
-
-  <style>
-    body {
-      background-color: #121212;
-      color: #ffffff;
-    }
-
-    .navbar-default {
-      background-color: #989ea2 !important;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
-    }
-
-    .navbar-default.scrolled {
-      background-color: transparent !important;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-    }
-
-    .project-content {
-      display: flex;
-      align-items: center;
-    }
-
-    .image-container {
-      width: 50%;
-      margin-right: 20px;
-    }
-
-    .image-container img {
-      width: 1000px;
-      height: 500px;
-      object-fit: contain;
-      background-color: #121212;
-    }
-
-    .text-container {
-      width: 50%;
-    }
-
-    .swiper-slide {
-      width: 50%;
-    }
-
-    .swiper-slide * {
-      user-select: text;
-      /* Allow text selection within slides */
-    }
-
-    .project-title-container {
-      text-align: center;
-    }
-
-    .project-title {
-      /* Style the project title */
-      font-size: 3em;
-      /* Make the title larger */
-      margin-bottom: 50px;
-      /* Add more space below the title */
-    }
-
-    .tools-used-icons {
-      display: flex;
-      justify-content: center;
-      /* Centra horizontalmente los íconos */
-      align-items: center;
-      /* Centra verticalmente */
-      flex-wrap: wrap;
-      /* Permite que los íconos se envuelvan en varias líneas si no caben */
-      gap: 15px;
-      /* Espaciado uniforme entre íconos */
-      margin-top: 20px;
-      padding: 10px 0;
-    }
-
-    /* Estilo base para los íconos */
-    .tools-used-icons img {
-      height: 50px;
-      /* Altura fija para todos los íconos */
-      width: auto;
-      /* Mantiene las proporciones originales */
-      max-width: 90px;
-      /* Máximo ancho para evitar que algunos íconos sean demasiado grandes */
-      object-fit: contain;
-      /* Ajusta el contenido sin distorsión */
-      transition: transform 0.3s ease;
-      /* Efecto animado al pasar el ratón */
-    }
-
-    /* Hover effect para los íconos */
-    .tools-used-icons img:hover {
-      transform: scale(1.2);
-      /* Aumenta ligeramente el tamaño al pasar el ratón */
-      filter: brightness(1.2);
-      /* Hace el ícono un poco más brillante */
-    }
-  </style>
+  <title>In-Engine Analytics & Visualization Custom Tools - Uri Martin Corella</title>
+  <meta name="description" content="In-engine analytics and visualization tools for a Minesweeper Unity game">
+  <meta name="author" content="Uri Martin Corella">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../css/hybrid-refactor.css">
 </head>
 
 <body>
-
-  <nav id="menu" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-          data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-left">
-          <li><a href="https://www.linkedin.com/in/urimartincorella/"><i class="fa fa-linkedin"
-                style="font-size: 1.5em;"></i></a></li>
-          <li><a href="https://github.com/dendritaDev"><i class="fa fa-github" style="font-size: 1.5em;"></i></a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="../index.html">About</a>
-          </li>
-          <li>
-            <a href="../projects.html">Projects</a>
-          </li>
-          <li>
-            <a href="../books.html">Books</a>
-          </li>
-          <li>
-            <a href="../Oriol Martín Corella.pdf" download="CV Uri Martín Corella.pdf">CV</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-
-  <section id="project-details" style="padding-top: 20px; padding-right: 40px;">
-    <div class="container project-title-container" style="width: 105%; padding: 100px;">
-      <h1 class="project-title">In-Engine Analytics & Visualization Custom Tools</h1>
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-
-          <!-- Slide 1 -->
-          <div class="swiper-slide">
-            <div class="project-content">
-              <div class="image-container">
-                <img src="../img/portfolio/MineSweeperImages/0.jpg" class="img-responsive" alt="App 1 Detail 1">
-              </div>
-              <div class="text-container">
-                <h3>Project Overview</h3>
-                <p>This project focuses on the development of custom data analysis and visualization tools within Unity
-                  Engine,
-                  designed for analyzing gameplay data from a Minesweeper-inspired game. It leverages Python, SQL, and
-                  data
-                  science libraries to process and analyze large datasets collected during gameplay.
-                </p>
-                <p>
-                  The tools enable exploratory data analysis (EDA), heatmap visualizations, statistical comparisons, and
-                  linear
-                  regression modeling directly within Unity. Additionally, machine learning agents (ML-Agents) simulate
-                  player
-                  behaviors, allowing for the study of exploration patterns and decision-making strategies across
-                  different skill
-                  levels and demographics.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="swiper-slide">
-            <div class="project-content">
-              <div class="image-container">
-                <!-- YouTube Video -->
-                <iframe width="800" height="450"
-                  src="https://www.youtube.com/embed/w-foPDsPHfk?rel=0&modestbranding=1&showinfo=0" frameborder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
-              </div>
-              <div class="text-container">
-                <h3>Heatmap Visualization</h3>
-                <p>
-                  This tool creates visual representations of player interactions on the game board.
-                  I can generate heatmaps showing click density, first clicks, or mine clicks,
-                  revealing patterns and tendencies in player behavior.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="swiper-slide">
-            <div class="project-content">
-              <div class="image-container">
-                <!-- YouTube Video -->
-                <iframe width="800" height="450"
-                  src="https://www.youtube.com/embed/AsP8noX9P0A?rel=0&modestbranding=1&showinfo=0&vq=hd1080"
-                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
-              <div class="text-container">
-                <h3>Click Trails</h3>
-                <p>
-                  This tool allows for the visualization of click sequences made by players.
-                  With this feature, we can understand how different player types approach the game.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 4 -->
-          <div class="swiper-slide">
-            <div class="project-content">
-              <div class="image-container">
-                <!-- YouTube Video -->
-                <iframe width="800" height="450"
-                  src="https://www.youtube.com/embed/9ECyzR80ARc?rel=0&modestbranding=1&showinfo=0&vq=hd1080"
-                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
-              <div class="text-container">
-                <h3>Exploratory Analysis</h3>
-                <p>
-                  This tool allows for the examination of individual variables such as game duration, click count, and
-                  efficiency.
-                  It can generate histograms, box plots, and scatter plots to explore distributions and relationships
-                  within the data.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 5 -->
-          <div class="swiper-slide">
-            <div class="project-content">
-              <div class="image-container">
-                <!-- YouTube Video -->
-                <iframe width="800" height="450"
-                  src="https://www.youtube.com/embed/YgNSRVaW3ik?rel=0&modestbranding=1&showinfo=0&vq=hd1080"
-                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
-              <div class="text-container">
-                <h3>Group Comparison</h3>
-                <p>
-                  This tool allows for the comparison of player groups.
-                  It can analyze whether there are significant differences in their performance using statistical tests
-                  and visualize the results with bar charts.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 6 -->
-          <div class="swiper-slide">
-            <div class="project-content">
-              <div class="image-container">
-                <!-- YouTube Video -->
-                <iframe width="800" height="450"
-                  src="https://www.youtube.com/embed/J9tLR6Hxsf4?rel=0&modestbranding=1&showinfo=0&vq=hd1080"
-                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
-              <div class="text-container">
-                <h3>Regression Analysis</h3>
-                <p>
-                  This tool investigates the influence of different factors on player outcomes.
-                  It can identify which variables, such as age or skill level,
-                  have a significant impact on metrics like win rate or score.
-                </p>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- Slide 2 -->
-          <div class="swiper-slide">
-            <div class="project-content">
-              <div class="image-container">
-                <img src="../img/portfolio/MineSweeperImages/1.jpg" class="img-responsive" alt="ML-Agents Simulation">
-              </div>
-              <div class="text-container">
-                <h3>ML-Agents Simulation</h3>
-                <p>
-                  To gather diverse gameplay data, I used Unity's ML-Agents to simulate players with varying skill
-                  levels – low,
-                  medium, and advanced. Each agent represents a different demographic player profile, allowing me to
-                  capture a
-                  wider range of behaviors.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 7 -->
-          <div class="swiper-slide">
-            <div class="project-content">
-              <div class="image-container">
-                <!-- YouTube Video -->
-                <iframe width="800" height="450"
-                  src="https://www.youtube.com/embed/c-P81Lgy11U?rel=0&modestbranding=1&showinfo=0&vq=hd1080"
-                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
-              <div class="text-container">
-                <h3>ML-Agents Simulation</h3>
-                <p>
-                  This video showcases simulations of ML-Agents with varying skill levels (low, advanced, and medium)
-                  playing Minesweeper.
-                </p>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- Slide 3 -->
-          <div class="swiper-slide">
-            <div class="project-content">
-              <div class="image-container">
-                <img src="../img/portfolio/MineSweeperImages/2.jpg" class="img-responsive" alt="Profiles Table">
-              </div>
-              <div class="text-container">
-                <h3>Profiles Table</h3>
-                <p>
-                  The data collected in this project is organized into three SQL tables: Profiles, Games, and Clicks.
-                </p>
-                <p>
-                  <strong>Profiles Table:</strong><br>
-                  Stores player information, including ID, age, gender, country, and skill level. A new profile is
-                  created at the
-                  beginning of each ML-Agent episode based on its assigned level, and this profile is sent to the SQL
-                  database.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 4 -->
-          <div class="swiper-slide">
-            <div class="project-content">
-              <div class="image-container">
-                <img src="../img/portfolio/MineSweeperImages/3.jpg" class="img-responsive" alt="Games Table">
-              </div>
-              <div class="text-container">
-                <h3>Games Table</h3>
-                <p>
-                  Contains key details about each game session, such as:
-                </p>
-                <ul>
-                  <li>Whether the player won or lost.</li>
-                  <li>Total playtime.</li>
-                  <li>Number of clicks.</li>
-                  <li>Score and efficiency (score divided by number of clicks).</li>
-                  <li>FloodFill activations – a Minesweeper algorithm that automatically reveals connected empty cells.
-                  </li>
-                  <li>Average time between clicks.</li>
-                  <li>Percentage of the board uncovered.</li>
-                </ul>
-                <p>This data is sent to the server at the end of each ML-Agent episode.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 5 -->
-          <div class="swiper-slide">
-            <div class="project-content">
-              <div class="image-container">
-                <img src="../img/portfolio/MineSweeperImages/4.jpg" class="img-responsive" alt="Clicks Table">
-              </div>
-              <div class="text-container">
-                <h3>Clicks Table</h3>
-                <p>
-                  Logs detailed data about every click action during gameplay, including:
-                </p>
-                <ul>
-                  <li>Player ID and game ID.</li>
-                  <li>Click number (first, fifth, etc.).</li>
-                  <li>Click coordinates (x, y).</li>
-                  <li>Whether the click uncovered a mine.</li>
-                  <li>Distance from the previous click.</li>
-                  <li>Time elapsed since the last click.</li>
-                </ul>
-                <p>This information is recorded every time the ML-Agent clicks a cell.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 6 -->
-          <div class="swiper-slide">
-            <div class="project-content">
-              <div class="image-container">
-                <img src="../img/portfolio/MineSweeperImages/5.jpg" class="img-responsive" alt="Data Import Process">
-              </div>
-              <div class="text-container">
-                <h3>Data Import Process</h3>
-                <p>
-                  To import the data stored on the server, the process begins with Unity sending an HTTP request.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 7 -->
-          <div class="swiper-slide">
-            <div class="project-content">
-              <div class="image-container">
-                <img src="../img/portfolio/MineSweeperImages/6.jpg" class="img-responsive" alt="Flask Middleware">
-              </div>
-              <div class="text-container">
-                <h3>Flask Middleware</h3>
-                <p>
-                  Instead of querying the SQL database directly through a PHP script, Unity’s request is sent to a
-                  Python Flask server.
-                  The Flask server acts as a middleware between Unity and the database. It contains multiple scripts,
-                  each dedicated
-                  to handling requests for specific tools.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 8 -->
-          <div class="swiper-slide">
-            <div class="project-content">
-              <div class="image-container">
-                <img src="../img/portfolio/MineSweeperImages/7.jpg" class="img-responsive" alt="Data Processing">
-              </div>
-              <div class="text-container">
-                <h3>Data Processing</h3>
-                <p>
-                  When Unity sends a request, Flask executes a SQL query to retrieve the required data from the
-                  database. After fetching the data,
-                  the Flask server processes it using Python libraries to generate calculations, visualizations, or
-                  formatted outputs.
-                  Flask then sends the results back to Unity in JSON format, dynamically integrating them into the tools
-                  for visualization and analysis.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 9 -->
-          <div class="swiper-slide">
-            <div class="project-content">
-              <div class="image-container">
-                <img src="../img/portfolio/MineSweeperImages/8.jpg" class="img-responsive" alt="Flask Processing Data">
-              </div>
-              <div class="text-container">
-                <h3>Data Processing and Integration</h3>
-                <p>After fetching the data, the Flask server processes it using Python libraries to generate
-                  calculations, visualizations, or formatted outputs.
-                  Finally, Flask sends the processed results back to Unity in JSON format, where the data is dynamically
-                  integrated into the tools for visualization and analysis.
-                  This architecture allows me to perform complex calculations and statistical analysis outside Unity.
-                </p>
-              </div>
-            </div>
-          </div>
-
-
+  <div class="site-shell">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <div class="nav-inner">
+        <a class="brand" href="../index.html"><img class="brand-mark" src="../img/brain.png" alt="" aria-hidden="true"><span>Uri MC</span></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-label="Toggle navigation" aria-expanded="false">+</button>
+        <div class="social-links" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/urimartincorella/" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          <a href="https://github.com/dendritaDev" aria-label="GitHub"><i class="fa fa-github"></i></a>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="nav-links">
+          <a href="../index.html">About</a>
+          <a href="../projects.html" aria-current="page">Data Projects</a>
+          <a href="../videogames.html">Games/Apps</a>
+          <a href="../books.html">Books</a>
+          <a href="../linkedin/CV%20Oriol%20Mart%C3%ADn%20Corella.pdf" download="CV Oriol Martín Corella.pdf">CV</a>
+        </div>
       </div>
-    </div>
+    </nav>
 
+    <main class="page-main">
+      <section class="case-hero">
+        <p class="eyebrow">Unity / Analytics Tooling / ML-Agents</p>
+        <h1>In-Engine Analytics Tools</h1>
+        <p class="lead">A custom analytics and visualization layer built inside a Minesweeper Unity game, connecting simulated players, game events, SQL storage and Python analysis.</p>
+        <div class="tag-list">
+          <span class="tag green">SQL</span>
+          <span class="tag green">Python</span>
+          <span class="tag">PHP Backend</span>
+          <span class="tag">Flask Backend</span>
+          <span class="tag purple">Unity</span>
+          <span class="tag purple">ML-Agents</span>
+        </div>
+      </section>
 
-    <div class="tools-used-icons">
-      <!-- Back-End -->
-      <img src="../img/tools/php-icon.png">
-      <img src="../img/tools/sql-icon.png" alt="SQL">
-      <img src="../img/tools/python-icon.png">
-      <img src="../img/tools/flask-icon.png">
-      <!-- Game Engine -->
-      <img src="../img/tools/unity-icon.png">
-      <!-- Python Libraries -->
-      <img src="../img/tools/scipy-icon.png">
-      <img src="../img/tools/numpy-icon.png">
-      <img src="../img/tools/pandas-icon.png">
-      <img src="../img/tools/matplotlib-icon.png">
-      <img src="../img/tools/seaborn-icon.png">
-    </div>
+      <section class="case-layout">
+        <div class="case-media">
+          <article class="case-slide">
+            <img src="../img/portfolio/MineSweeperImages/0.jpg" alt="Minesweeper analytics overview">
+            <div>
+              <h2>Project Overview</h2>
+              <p>This project focuses on the development of custom data analysis and visualization tools within Unity for my Minesweeper game.</p>
+              <p>The goal was to record gameplay behavior, transform it into analyzable data, and make the results visible directly in-engine and through Python analysis.</p>
+            </div>
+          </article>
 
-  </section>
+          <article class="case-slide">
+            <iframe src="https://www.youtube.com/embed/w-foPDsPHfk?rel=0&modestbranding=1&showinfo=0" title="Heatmap Visualization" allowfullscreen></iframe>
+            <div>
+              <h2>Heatmap Visualization</h2>
+              <p>Heatmaps make spatial player behavior visible by showing which cells are interacted with most frequently across games and simulated sessions.</p>
+            </div>
+          </article>
 
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script type="text/javascript" src="../js/bootstrap.js"></script>
-  <script>
-    // Initialize Swiper for this project
-    new Swiper('.swiper-container', {
-      loop: false,
-      spaceBetween: 100,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      allowTouchMove: false, // Prevent touch swiping/dragging
-    });
+          <article class="case-slide">
+            <iframe src="https://www.youtube.com/embed/AsP8noX9P0A?rel=0&modestbranding=1&showinfo=0&vq=hd1080" title="Click Trails" allowfullscreen></iframe>
+            <div>
+              <h2>Click Trails</h2>
+              <p>Click trails reconstruct player decisions over time, making it easier to inspect movement, spacing and decision sequences inside the board.</p>
+            </div>
+          </article>
 
-    window.addEventListener('scroll', function () {
-      const navbar = document.getElementById('menu');
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-  </script>
+          <article class="case-slide">
+            <iframe src="https://www.youtube.com/embed/9ECyzR80ARc?rel=0&modestbranding=1&showinfo=0&vq=hd1080" title="Exploratory Analysis" allowfullscreen></iframe>
+            <div>
+              <h2>Exploratory Analysis</h2>
+              <p>Exploratory visualizations were used to inspect patterns in playtime, clicking behavior, success, board coverage and performance differences.</p>
+            </div>
+          </article>
 
+          <article class="case-slide">
+            <iframe src="https://www.youtube.com/embed/YgNSRVaW3ik?rel=0&modestbranding=1&showinfo=0&vq=hd1080" title="Group Comparison" allowfullscreen></iframe>
+            <div>
+              <h2>Group Comparison</h2>
+              <p>Group comparison views help compare outcomes across simulated player types and identify meaningful differences in performance and behavior.</p>
+            </div>
+          </article>
+
+          <article class="case-slide">
+            <iframe src="https://www.youtube.com/embed/J9tLR6Hxsf4?rel=0&modestbranding=1&showinfo=0&vq=hd1080" title="Regression Analysis" allowfullscreen></iframe>
+            <div>
+              <h2>Regression Analysis</h2>
+              <p>Regression analysis was used to connect gameplay variables with outcome metrics and inspect which behaviors were most predictive.</p>
+            </div>
+          </article>
+
+          <article class="case-slide">
+            <img src="../img/portfolio/MineSweeperImages/1.jpg" alt="ML-Agents Simulation">
+            <div>
+              <h2>ML-Agents Simulation</h2>
+              <p>Simulated players were created with neural networks to generate gameplay sessions and produce enough behavioral data for analysis.</p>
+            </div>
+          </article>
+
+          <article class="case-slide">
+            <iframe src="https://www.youtube.com/embed/c-P81Lgy11U?rel=0&modestbranding=1&showinfo=0&vq=hd1080" title="ML-Agents Simulation video" allowfullscreen></iframe>
+            <div>
+              <h2>ML-Agents Simulation</h2>
+              <p>The simulation loop sends gameplay events through the backend so that each episode can become part of the analytics pipeline.</p>
+            </div>
+          </article>
+
+          <article class="case-slide">
+            <img src="../img/portfolio/MineSweeperImages/2.jpg" alt="Profiles Table">
+            <div>
+              <h2>Profiles Table</h2>
+              <p>The profiles table stores player-level information so each simulated or real user can be connected to the games and clicks they generate.</p>
+            </div>
+          </article>
+
+          <article class="case-slide">
+            <img src="../img/portfolio/MineSweeperImages/3.jpg" alt="Games Table">
+            <div>
+              <h2>Games Table</h2>
+              <p>The games table stores whether the player won or lost, total playtime, number of clicks, score, efficiency, FloodFill activations, average time between clicks and percentage of the board uncovered.</p>
+              <p>This data is sent to the server at the end of each ML-Agent episode.</p>
+            </div>
+          </article>
+
+          <article class="case-slide">
+            <img src="../img/portfolio/MineSweeperImages/4.jpg" alt="Clicks Table">
+            <div>
+              <h2>Clicks Table</h2>
+              <p>The clicks table records player ID, game ID, click number, click coordinates, mine outcome, distance from previous click and elapsed time since the last click.</p>
+              <p>This information is recorded every time the ML-Agent clicks a cell.</p>
+            </div>
+          </article>
+
+          <article class="case-slide">
+            <img src="../img/portfolio/MineSweeperImages/5.jpg" alt="Data Import Process">
+            <div>
+              <h2>Data Import Process</h2>
+              <p>Gameplay data is imported from the database into the analysis environment so Python can process it and generate behavioral summaries.</p>
+            </div>
+          </article>
+
+          <article class="case-slide">
+            <img src="../img/portfolio/MineSweeperImages/6.jpg" alt="Flask Middleware">
+            <div>
+              <h2>Flask Middleware</h2>
+              <p>A Flask middleware layer connects the data source and the Python processing scripts, making the analytics workflow easier to run and inspect.</p>
+            </div>
+          </article>
+
+          <article class="case-slide">
+            <img src="../img/portfolio/MineSweeperImages/7.jpg" alt="Data Processing">
+            <div>
+              <h2>Data Processing</h2>
+              <p>Python libraries process the raw gameplay records into derived metrics, comparisons and visualizations.</p>
+            </div>
+          </article>
+
+          <article class="case-slide">
+            <img src="../img/portfolio/MineSweeperImages/8.jpg" alt="Flask Processing Data">
+            <div>
+              <h2>Data Processing and Integration</h2>
+              <p>After fetching the data, the Flask server processes it using Python libraries to generate the analysis outputs used by the project.</p>
+            </div>
+          </article>
+        </div>
+
+        <aside>
+          <div class="case-panel">
+            <div class="mono-label">Stack</div>
+            <div class="tool-grid">
+              <div class="tool-card"><img src="../img/tools/php-icon.png" alt="" aria-hidden="true"><span>PHP</span></div>
+              <div class="tool-card"><img src="../img/tools/sql-icon.png" alt="" aria-hidden="true"><span>SQL</span></div>
+              <div class="tool-card"><img src="../img/tools/python-icon.png" alt="" aria-hidden="true"><span>Python</span></div>
+              <div class="tool-card"><img src="../img/tools/flask-icon.png" alt="" aria-hidden="true"><span>Flask</span></div>
+              <div class="tool-card"><img src="../img/tools/unity-icon.png" alt="" aria-hidden="true"><span>Unity</span></div>
+              <div class="tool-card"><img src="../img/tools/scipy-icon.png" alt="" aria-hidden="true"><span>SciPy</span></div>
+              <div class="tool-card"><img src="../img/tools/numpy-icon.png" alt="" aria-hidden="true"><span>NumPy</span></div>
+              <div class="tool-card"><img src="../img/tools/pandas-icon.png" alt="" aria-hidden="true"><span>Pandas</span></div>
+              <div class="tool-card"><img src="../img/tools/matplotlib-icon.png" alt="" aria-hidden="true"><span>Matplotlib</span></div>
+              <div class="tool-card"><img src="../img/tools/seaborn-icon.png" alt="" aria-hidden="true"><span>Seaborn</span></div>
+            </div>
+          </div>
+          <div class="case-panel">
+            <div class="mono-label">Data model</div>
+            <div class="tag-list">
+              <span class="tag">Profiles</span>
+              <span class="tag">Games</span>
+              <span class="tag">Clicks</span>
+              <span class="tag green">Metrics</span>
+            </div>
+          </div>
+          <div class="case-panel">
+            <div class="mono-label">Analysis focus</div>
+            <p>Heatmaps, click trails, exploratory analysis, group comparison and regression analysis.</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/hybrid-site.js"></script>
 </body>
 
 </html>

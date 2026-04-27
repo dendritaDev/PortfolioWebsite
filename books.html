@@ -2,281 +2,170 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Books - Uri Martín Corella</title>
-    <meta name="description" content="Experience and Books by Uri Martín Corella, Data Analyst and Game Developer">
-    <meta name="keywords" content="portfolio, data analysis, game development, UI/UX design, educational games">
-    <meta name="author" content="Uri Martín Corella">
-
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/uri.css">
-
-    <script type="text/javascript" src="js/modernizr.custom.js"></script>
-    <style>
-        .navbar-default {
-            background-color: #989ea2 !important;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
-        }
-
-        .navbar-default.scrolled {
-            background-color: transparent !important;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Books - Uri Martin Corella</title>
+  <meta name="description" content="Experience and Books by Uri Martin Corella, Data Analyst and Game Developer">
+  <meta name="keywords" content="portfolio, data analysis, game development, UI/UX design, educational games">
+  <meta name="author" content="Uri Martin Corella">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="css/hybrid-refactor.css">
 </head>
 
 <body>
-    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-left">
-                    <li><a href="https://www.linkedin.com/in/urimartincorella/"><i class="fa fa-linkedin"
-                                style="font-size: 1.5em;"></i></a></li>
-                    <li><a href="https://github.com/dendritaDev"><i class="fa fa-github"
-                                style="font-size: 1.5em;"></i></a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="index.html">About</a>
-                    </li>
-                    <li>
-                        <a href="projects.html">Data Projects</a>
-                    </li>
-                    <li>
-                        <a href="videogames.html">Games/Apps</a>
-                    </li>
-                    <li>
-                        <a href="books.html">Books</a>
-                    </li>
-                    <li>
-                        <a href="Oriol Martín Corella.pdf" download="CV Uri Martín Corella.pdf">CV</a>
-                    </li>
-                </ul>
-            </div>
+  <div class="site-shell">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <div class="nav-inner">
+        <a class="brand" href="index.html"><img class="brand-mark" src="img/brain.png" alt="" aria-hidden="true"><span>Uri MC</span></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-label="Toggle navigation" aria-expanded="false">+</button>
+        <div class="social-links" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/urimartincorella/" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          <a href="https://github.com/dendritaDev" aria-label="GitHub"><i class="fa fa-github"></i></a>
         </div>
+        <div class="nav-links">
+          <a href="index.html">About</a>
+          <a href="projects.html">Data Projects</a>
+          <a href="videogames.html">Games/Apps</a>
+          <a href="books.html" aria-current="page">Books</a>
+          <a href="linkedin/CV%20Oriol%20Mart%C3%ADn%20Corella.pdf" download="CV Oriol Martín Corella.pdf">CV</a>
+        </div>
+      </div>
     </nav>
 
-    <!-- Books Section -->
-    <section id="books" style="background-color: #121212; color: #ffffff; padding-top: 60px; ">
-        <div class="container-fluid">
-            <div class="section-header">
-                <h2 style="color: #ffffff; margin-bottom: 20px;">Books</h2>
-                <h5 style="margin-top: 25px; margin-bottom: -20px;"><em>Books I have Read and Found Valuable for My
-                        (Hopefully) Future Job</em></h5>
-                <div class="fancy"><span></span></div>
-            </div>
-
-
-            <!-- Game Analytics Section -->
-            <div class="genre-section">
-                <h3 class="genre-title">Game Analytics</h3>
-                <div class="book-grid">
-                    <div class="book-item">
-                        <img src="img/Books/Game Analytics.jpg" alt="Book 5">
-                        <div class="book-details">
-                            <h4>Game Analytics</h4>
-                            <div class="topics">
-                                <span class="topic">Game KPI's</span>
-                                <span class="topic">SQL</span>
-                                <span class="topic">Statistics</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="book-item" style="visibility: hidden;">
-                        <div class="book-details">
-                            <!-- No content -->
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- People Analytics Section -->
-            <div class="genre-section">
-                <h3 class="genre-title">People/HR Analytics</h3>
-                <div class="book-grid">
-                    <div class="book-item">
-                        <img src="img/Books/HrAnalyticsEdwards.png" alt="Book 5">
-                        <div class="book-details">
-                            <h4>Predictive HR Analytics</h4>
-                            <div class="topics">
-                                <span class="topic">Predictive Analytics</span>
-                                <span class="topic">Statistics</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="book-item">
-                        <img src="img/Books/HR Analytics Cedric.jpg" alt="Book 5">
-                        <div class="book-details">
-                            <h4>HR Analytics</h4>
-                            <div class="topics">
-                                <span class="topic">Excel</span>
-                                <span class="topic">Predictive Analytics</span>
-                                <span class="topic">Statistics</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Statistics Section -->
-            <div class="genre-section">
-                <h3 class="genre-title">Statistics</h3>
-                <div class="book-grid">
-                    <div class="book-item">
-                        <img src="img/Books/NakedStatistics.jpg" alt="Book 5">
-                        <div class="book-details">
-                            <h4>Naked Statistics</h4>
-                        </div>
-                    </div>
-                    <div class="book-item">
-                        <img src="img/Books/OpenIntroStatistics.jpg" alt="Book 6">
-                        <div class="book-details">
-                            <h4>OpenIntro Statistics</h4>
-                            <div class="topics">
-                                <span class="topic">Data</span>
-                                <span class="topic">Probability</span>
-                                <span class="topic">Distributions</span>
-                                <span class="topic">Inference</span>
-                                <span class="topic">Linear Regression</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Programming Section -->
-            <div class="genre-section">
-                <h3 class="genre-title">Programming</h3>
-                <div class="book-grid">
-                    <div class="book-item">
-                        <img src="img/Books/PtyhonDA.jpg" alt="Book 5">
-                        <div class="book-details">
-                            <h4>Python for Data Analysis</h4>
-                            <div class="topics">
-                                <span class="topic">Data Cleaning</span>
-                                <span class="topic">Pandas</span>
-                                <span class="topic">NumPy</span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="book-item" style="visibility: hidden;">
-                        <div class="book-details">
-                            <!-- No content -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Psychology Section -->
-            <div class="genre-section">
-                <h3 class="genre-title">Psychology</h3>
-                <div class="book-grid">
-                    <!-- Self-Determination Theory -->
-                    <div class="book-item">
-                        <img src="img/Books/SelfDeterminationTheory.jpg" alt="Self-Determination Theory">
-                        <div class="book-details">
-                            <h4>Self-Determination Theory</h4>
-                            <div class="topics">
-                                <span class="topic">Motivation</span>
-                                <span class="topic">BPN in Games</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Getting Gamers -->
-                    <div class="book-item">
-                        <img src="img/Books/GettingGamers.jpg" alt="Getting Gamers">
-                        <div class="book-details">
-                            <h4>Getting Gamers</h4>
-                            <div class="topics">
-                                <span class="topic">Psychology in Games</span>
-                                <span class="topic">Player Psychology</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Principles of Learning and Behavior -->
-                    <div class="book-item">
-                        <img src="img/Books/PrinciplesLearningBehavior.jpg" alt="Principles of Learning and Behavior">
-                        <div class="book-details">
-                            <h4>Principles of Learning and Behavior</h4>
-                            <div class="topics">
-                                <span class="topic">Conditioning</span>
-                                <span class="topic">Reinforcement Techniques</span>
-                                <span class="topic">Boosting Player Spending</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Thinking, Fast and Slow -->
-                    <div class="book-item">
-                        <img src="img/Books/ThinkingFastSlow.jpg" alt="Thinking, Fast and Slow">
-                        <div class="book-details">
-                            <h4>Thinking, Fast and Slow</h4>
-                            <div class="topics">
-                                <span class="topic">Behavioral Economics</span>
-                                <span class="topic">Decision Making</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Flow -->
-                    <div class="book-item">
-                        <img src="img/Books/Flow.jpg" alt="Flow">
-                        <div class="book-details">
-                            <h4>Flow</h4>
-                            <div class="topics">
-                                <span class="topic">Challenge-Skill Balance</span>
-                                <span class="topic">Immersion</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- UXUI -->
-                    <div class="book-item">
-                        <img src="img/Books/UXUI.jpg" alt="Flow">
-                        <div class="book-details">
-                            <h4>The Gamer's Brain: How Neuroscience and UX Can Impact Video Game Design</h4>
-                            <div class="topics">
-                                <span class="topic">UX/UI</span>
-                                <span class="topic">Neuroscience</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
+    <main class="page-main">
+      <section class="hero compact">
+        <div>
+          <p class="eyebrow">Books</p>
+          <h1>Product library.</h1>
+          <p class="lead">Books I have read and found valuable for my future work: analytics, statistics, psychology, experimentation and game UX.</p>
         </div>
-    </section>
+      </section>
 
+      <section class="book-section">
+        <h2>Product & Game Analytics</h2>
+        <div class="book-grid">
+          <article class="book-card">
+            <img src="img/Books/Game Analytics.jpg" alt="Game Analytics book cover">
+            <div>
+              <h3>Game Analytics</h3>
+              <div class="tag-list">
+                <span class="tag purple">Game KPI's</span>
+                <span class="tag green">SQL</span>
+                <span class="tag">Statistics</span>
+              </div>
+            </div>
+          </article>
+          <article class="book-card">
+            <img src="img/Books/WebAnalytics2.jpg" alt="Web Analytics 2.0 book cover">
+            <div>
+              <h3>Web Analytics 2.0</h3>
+              <div class="tag-list"><span class="tag green">Product Analytics</span><span class="tag">Digital Metrics</span><span class="tag">Customer Behavior</span><span class="tag">Optimization</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script>
-        window.addEventListener('scroll', function () {
-            const navbar = document.getElementById('menu'); // Selecciona por ID
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
+      <section class="book-section">
+        <h2>People / HR Analytics</h2>
+        <div class="book-grid">
+          <article class="book-card">
+            <img src="img/Books/HrAnalyticsEdwards.png" alt="Predictive HR Analytics book cover">
+            <div>
+              <h3>Predictive HR Analytics</h3>
+              <div class="tag-list"><span class="tag green">Predictive Analytics</span><span class="tag">Statistics</span></div>
+            </div>
+          </article>
+          <article class="book-card">
+            <img src="img/Books/HR Analytics Cedric.jpg" alt="HR Analytics book cover">
+            <div>
+              <h3>HR Analytics</h3>
+              <div class="tag-list"><span class="tag">Excel</span><span class="tag green">Predictive Analytics</span><span class="tag">Statistics</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
 
-    </script>
+      <section class="book-section">
+        <h2>Statistics</h2>
+        <div class="book-grid">
+          <article class="book-card">
+            <img src="img/Books/NakedStatistics.jpg" alt="Naked Statistics book cover">
+            <div>
+              <h3>Naked Statistics</h3>
+              <div class="tag-list"><span class="tag">Statistics</span></div>
+            </div>
+          </article>
+          <article class="book-card">
+            <img src="img/Books/OpenIntroStatistics.jpg" alt="OpenIntro Statistics book cover">
+            <div>
+              <h3>OpenIntro Statistics</h3>
+              <div class="tag-list"><span class="tag green">Data</span><span class="tag">Probability</span><span class="tag">Inference</span><span class="tag">Linear Regression</span></div>
+            </div>
+          </article>
+          <article class="book-card">
+            <img src="img/Books/trustworthy-online-controlled-experiments.jpg" alt="Trustworthy Online Controlled Experiments book cover">
+            <div>
+              <h3>Trustworthy Online Controlled Experiments</h3>
+              <div class="tag-list"><span class="tag ochre">Experimentation</span><span class="tag ochre">A/B Testing</span><span class="tag">Causal Inference</span><span class="tag">Decision Making</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="book-section">
+        <h2>Programming</h2>
+        <div class="book-grid">
+          <article class="book-card">
+            <img src="img/Books/PtyhonDA.jpg" alt="Python for Data Analysis book cover">
+            <div>
+              <h3>Python for Data Analysis</h3>
+              <div class="tag-list"><span class="tag green">Data Cleaning</span><span class="tag green">Pandas</span><span class="tag green">NumPy</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="book-section">
+        <h2>Psychology</h2>
+        <div class="book-grid">
+          <article class="book-card">
+            <img src="img/Books/SelfDeterminationTheory.jpg" alt="Self-Determination Theory book cover">
+            <div><h3>Self-Determination Theory</h3><div class="tag-list"><span class="tag ochre">Motivation</span><span class="tag purple">BPN in Games</span></div></div>
+          </article>
+          <article class="book-card">
+            <img src="img/Books/GettingGamers.jpg" alt="Getting Gamers book cover">
+            <div><h3>Getting Gamers</h3><div class="tag-list"><span class="tag ochre">Psychology in Games</span><span class="tag purple">Player Psychology</span></div></div>
+          </article>
+          <article class="book-card">
+            <img src="img/Books/PrinciplesLearningBehavior.jpg" alt="Principles of Learning and Behavior book cover">
+            <div><h3>Principles of Learning and Behavior</h3><div class="tag-list"><span class="tag ochre">Conditioning</span><span class="tag">Reinforcement Techniques</span><span class="tag">Boosting Player Spending</span></div></div>
+          </article>
+          <article class="book-card">
+            <img src="img/Books/ThinkingFastSlow.jpg" alt="Thinking, Fast and Slow book cover">
+            <div><h3>Thinking, Fast and Slow</h3><div class="tag-list"><span class="tag ochre">Behavioral Economics</span><span class="tag">Decision Making</span></div></div>
+          </article>
+          <article class="book-card">
+            <img src="img/Books/Flow.jpg" alt="Flow book cover">
+            <div><h3>Flow</h3><div class="tag-list"><span class="tag purple">Challenge-Skill Balance</span><span class="tag purple">Immersion</span></div></div>
+          </article>
+          <article class="book-card">
+            <img src="img/Books/UXUI.jpg" alt="The Gamer's Brain book cover">
+            <div><h3>The Gamer's Brain: How Neuroscience and UX Can Impact Video Game Design</h3><div class="tag-list"><span class="tag purple">UX/UI</span><span class="tag ochre">Neuroscience</span></div></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Uri Martin Corella</span>
+      <span>Reading list for analytics, behavior and games.</span>
+    </footer>
+  </div>
+
+  <script src="js/hybrid-site.js"></script>
 </body>
 
 </html>
