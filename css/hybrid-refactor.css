@@ -368,86 +368,58 @@ p {
   text-transform: uppercase;
 }
 
-.bar-list {
+.profile-focus-list {
   display: grid;
-  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
 }
 
-.bar-row {
-  display: grid;
-  grid-template-columns: 112px 1fr;
-  gap: 12px;
-  align-items: center;
-  color: var(--text-secondary);
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.bar-label {
+.profile-focus-item {
   min-width: 0;
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
+  padding: 9px 10px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  background: var(--neutral-50);
   color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.15;
 }
 
-.bar-label i {
-  width: 18px;
-  height: 18px;
+.profile-focus-item i {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   background: var(--color-pm-blue-light);
   color: var(--color-pm-blue);
-  font-size: 10px;
+  font-size: 11px;
 }
 
-.bar-label.data i {
+.profile-focus-item span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.profile-focus-item.data i {
   background: var(--color-data-green-light);
   color: var(--color-data-green);
 }
 
-.bar-label.psychology i {
+.profile-focus-item.psychology i {
   background: var(--color-ochre-light);
   color: var(--color-ochre);
 }
 
-.bar-label.software i {
+.profile-focus-item.game-dev i {
   background: var(--color-game-purple-light);
   color: var(--color-game-purple);
-}
-
-.bar-track {
-  height: 8px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: var(--bg-sunken);
-}
-
-.bar-fill {
-  display: block;
-  height: 100%;
-  background: var(--color-pm-blue);
-}
-
-.bar-fill.product {
-  width: 76%;
-}
-
-.bar-fill.data {
-  width: 76%;
-  background: var(--color-data-green);
-}
-
-.bar-fill.psychology {
-  width: 76%;
-  background: var(--color-ochre);
-}
-
-.bar-fill.software {
-  width: 76%;
-  background: var(--color-game-purple);
 }
 
 .section-band {
@@ -1303,9 +1275,8 @@ p {
     padding: 42px 0;
   }
 
-  .bar-row {
+  .profile-focus-list {
     grid-template-columns: 1fr;
-    gap: 6px;
   }
 
   .book-card {
