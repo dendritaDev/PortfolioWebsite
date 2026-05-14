@@ -447,11 +447,24 @@ p {
 
 .simple-list h3 {
   font-family: var(--font-display);
-  font-size: 27px;
+  font-size: 24px;
+  line-height: 1.08;
 }
 
 .simple-list p {
   margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.project-origin {
+  margin-top: 6px !important;
+  color: var(--color-pm-blue) !important;
+  font-family: var(--font-mono);
+  font-size: 11px !important;
+  font-weight: 800;
+  line-height: 1.35 !important;
+  text-transform: uppercase;
 }
 
 @media (max-width: 900px) {
@@ -736,6 +749,12 @@ p {
 
   .simple-list h3 {
     font-size: 10pt;
+  }
+
+  .simple-list p,
+  .project-origin {
+    font-size: 7.2pt !important;
+    line-height: 1.22 !important;
   }
 
   a {
