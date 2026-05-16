@@ -7,6 +7,8 @@
   --color-data-green-light: #e6f5ee;
   --color-game-purple: #6535b8;
   --color-game-purple-light: #f1ecfb;
+  --color-art-coral: #b5523e;
+  --color-art-coral-light: #f9ece8;
   --neutral-50: #fafaf7;
   --neutral-100: #f4f1ea;
   --neutral-150: #eeeae0;
@@ -286,19 +288,69 @@ p {
   margin: 0;
 }
 
-.plain-columns {
-  columns: 2 320px;
-  column-gap: 42px;
+.simple-list h3 {
+  color: var(--text-primary);
 }
 
-.plain-columns p {
-  margin: 0 0 14px;
+.skills-visual {
+  margin: 0 0 22px;
+}
+
+.skills-visual img {
+  width: min(501px, 100%);
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.skills-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 36px;
+}
+
+.skills-column {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+}
+
+.skills-detail {
   break-inside: avoid;
 }
 
-.plain-columns strong,
-.simple-list h3 {
-  color: var(--text-primary);
+.skills-detail h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.skills-detail.pillar-game-dev h3 {
+  color: var(--color-pm-blue);
+}
+
+.skills-detail.pillar-psychology h3 {
+  color: var(--color-data-green);
+}
+
+.skills-detail.pillar-analytics h3 {
+  color: var(--color-game-purple);
+}
+
+.skills-detail.pillar-ai h3 {
+  color: #d56400;
+}
+
+.skills-detail.pillar-art h3 {
+  color: #0f93a6;
+}
+
+.skills-detail .clean-list {
+  margin: 0;
+}
+
+.skills-detail .clean-list li + li {
+  margin-top: 6px;
 }
 
 .experience-list {
@@ -514,6 +566,18 @@ p {
     grid-template-columns: 1fr;
     gap: 8px;
   }
+
+  .skills-visual {
+    margin-bottom: 18px;
+  }
+
+  .skills-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-column {
+    gap: 16px;
+  }
 }
 
 @media (max-width: 620px) {
@@ -659,13 +723,14 @@ p {
     display: none;
   }
 
-  .plain-columns {
-    columns: 2;
-    column-gap: 14px;
+  .skills-visual {
+    margin-bottom: 10px;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
-  .plain-columns p {
-    margin-bottom: 4px;
+  .skills-visual img {
+    width: min(96mm, 100%);
   }
 
   .experience-list::before {
@@ -755,6 +820,35 @@ p {
   .project-origin {
     font-size: 7.2pt !important;
     line-height: 1.22 !important;
+  }
+
+  .skills-detail-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .skills-column {
+    gap: 8px;
+  }
+
+  .skills-detail {
+    padding: 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .skills-detail h3 {
+    margin-bottom: 3px;
+    font-size: 9pt;
+  }
+
+  .skills-detail .clean-list {
+    padding-left: 10px;
+  }
+
+  .skills-detail .clean-list li {
+    font-size: 7pt;
+    line-height: 1.18;
   }
 
   a {
