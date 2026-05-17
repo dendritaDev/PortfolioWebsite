@@ -31,4 +31,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+  document.querySelectorAll("[data-muted-lock]").forEach((video) => {
+    const lockAudio = () => {
+      video.muted = true;
+      video.volume = 0;
+    };
+
+    lockAudio();
+    video.addEventListener("volumechange", lockAudio);
+    video.addEventListener("loadedmetadata", lockAudio);
+    video.addEventListener("play", lockAudio);
+  });
 });
