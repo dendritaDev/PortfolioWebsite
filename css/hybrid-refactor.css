@@ -816,6 +816,11 @@ p {
   object-fit: cover;
 }
 
+.media-frame.logo-frame img {
+  padding: 24px;
+  object-fit: contain;
+}
+
 .project-media img {
   padding: 12px;
   object-fit: contain;
@@ -1112,6 +1117,49 @@ p {
 .case-slide h2 {
   margin-bottom: 10px;
   font-size: 29px;
+}
+
+.comparison-table-panel h2 {
+  margin-bottom: 14px;
+  font-size: 29px;
+}
+
+.comparison-table-scroll {
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 11px 12px;
+  border: 1px solid var(--border-default);
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparison-table thead th {
+  background: var(--bg-sunken);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.comparison-table tbody th {
+  color: var(--text-primary);
+  font-weight: 800;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+  background: rgba(244, 241, 234, 0.52);
 }
 
 .tool-grid {
