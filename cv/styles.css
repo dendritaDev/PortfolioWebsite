@@ -218,6 +218,11 @@ a:hover {
   margin-bottom: 30px;
 }
 
+.location-note {
+  font-size: 0.62em;
+  color: var(--neutral-500);
+}
+
 .eyebrow,
 .kicker {
   display: inline-flex;
@@ -295,11 +300,7 @@ p {
 }
 
 .portrait-card {
-  padding: 14px;
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius-md);
-  background: var(--bg-elevated);
-  box-shadow: var(--shadow-md);
+  padding: 0;
 }
 
 .portrait-card img {
@@ -692,8 +693,7 @@ p {
   }
 
   .portrait-card {
-    padding: 2mm;
-    box-shadow: none;
+    padding: 0;
   }
 
   .eyebrow,
