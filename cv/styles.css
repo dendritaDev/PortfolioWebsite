@@ -214,6 +214,10 @@ a:hover {
   align-items: center;
 }
 
+.cv-hero h1 {
+  margin-bottom: 30px;
+}
+
 .eyebrow,
 .kicker {
   display: inline-flex;
@@ -384,7 +388,7 @@ p {
 }
 
 .skills-detail .clean-list li + li {
-  margin-top: 6px;
+  margin-top: 7px;
 }
 
 .experience-list {
@@ -409,7 +413,7 @@ p {
   display: grid;
   grid-template-columns: 150px minmax(0, 1fr);
   gap: 52px;
-  padding: 0 0 28px;
+  padding: 0 0 38px;
 }
 
 .experience-item::before {
@@ -478,7 +482,7 @@ p {
 }
 
 .experience-body {
-  padding: 4px 0 26px;
+  padding: 4px 0 34px;
   border-bottom: 1px solid var(--border-default);
 }
 
@@ -497,12 +501,13 @@ p {
 
 .experience-company {
   margin: 0 0 14px;
-  color: var(--color-pm-blue);
-  font-weight: 800;
+  color: var(--neutral-500);
+  font-style: italic;
+  font-weight: 700;
 }
 
 .experience-body .tag-list {
-  margin-top: 20px;
+  margin-top: 26px;
 }
 
 .clean-list {
@@ -590,6 +595,7 @@ p {
     grid-template-columns: 1fr;
     gap: 12px;
     padding-left: 34px;
+    padding-bottom: 36px;
   }
 
   .experience-item::before {
@@ -702,8 +708,12 @@ p {
   }
 
   h1 {
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     font-size: 22pt;
+  }
+
+  .cv-hero h1 {
+    margin-bottom: 8px;
   }
 
   h2 {
@@ -777,7 +787,7 @@ p {
   .experience-item {
     grid-template-columns: 38mm minmax(0, 1fr);
     gap: 8mm;
-    padding-bottom: 7px;
+    padding-bottom: 9px;
     break-inside: avoid;
     page-break-inside: avoid;
   }
@@ -821,7 +831,7 @@ p {
   }
 
   .experience-body {
-    padding: 0 0 5px;
+    padding: 0 0 7px;
   }
 
   .experience-body h3 {
@@ -835,7 +845,7 @@ p {
 
   .experience-body .tag-list {
     gap: 3px;
-    margin-top: 4px;
+    margin-top: 9px;
   }
 
   .tag {
@@ -891,12 +901,12 @@ p {
   }
 
   .skills-detail .clean-list {
-    padding-left: 10px;
+    padding-left: 12px;
   }
 
   .skills-detail .clean-list li {
-    font-size: 7pt;
-    line-height: 1.18;
+    font-size: 8pt;
+    line-height: 1.25;
   }
 
   a {
