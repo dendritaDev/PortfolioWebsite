@@ -161,6 +161,42 @@ a:hover {
   transform: translateY(-2px);
 }
 
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 11px;
+  border: 1px solid rgba(32, 85, 212, 0.14);
+  border-radius: 999px;
+  background: var(--color-pm-blue-light);
+  color: var(--color-pm-blue);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tag.ochre {
+  border-color: rgba(155, 111, 30, 0.16);
+  background: var(--color-ochre-light);
+  color: var(--color-ochre);
+}
+
+.tag.green {
+  border-color: rgba(26, 122, 84, 0.16);
+  background: var(--color-data-green-light);
+  color: var(--color-data-green);
+}
+
+.tag.purple {
+  border-color: rgba(101, 53, 184, 0.16);
+  background: var(--color-game-purple-light);
+  color: var(--color-game-purple);
+}
+
 .page-main {
   width: min(1280px, calc(100% - 32px));
   margin: 0 auto;
@@ -172,7 +208,6 @@ a:hover {
   grid-template-columns: minmax(0, 1fr) 320px;
   gap: 46px;
   align-items: center;
-  border-bottom: 1px solid var(--border-default);
 }
 
 .cv-hero {
@@ -273,7 +308,6 @@ p {
 
 .section-band {
   padding: 58px 0;
-  border-bottom: 1px solid var(--border-default);
 }
 
 .section-head {
@@ -467,6 +501,10 @@ p {
   font-weight: 800;
 }
 
+.experience-body .tag-list {
+  margin-top: 20px;
+}
+
 .clean-list {
   margin: 0;
   padding-left: 18px;
@@ -640,7 +678,6 @@ p {
     grid-template-columns: minmax(0, 1fr) 26mm;
     gap: 8mm;
     align-items: start;
-    border-bottom: 1px solid var(--border-default);
   }
 
   .profile-panel {
@@ -794,6 +831,17 @@ p {
 
   .experience-company {
     margin-bottom: 2px;
+  }
+
+  .experience-body .tag-list {
+    gap: 3px;
+    margin-top: 4px;
+  }
+
+  .tag {
+    padding: 1px 5px;
+    font-size: 6.5pt;
+    line-height: 1.15;
   }
 
   .clean-list {
