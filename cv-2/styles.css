@@ -437,10 +437,11 @@ p {
 }
 
 .education-list::before {
-  background: var(--color-data-green);
+  display: none;
 }
 
 .education-list .experience-item::before {
+  display: none;
   width: 20px;
   height: 20px;
   border-color: var(--bg-base);
@@ -453,12 +454,57 @@ p {
   position: absolute;
   top: 20px;
   left: 176px;
+  display: none;
   width: 4px;
   height: 7px;
   border-right: 2px solid var(--color-data-green);
   border-bottom: 2px solid var(--color-data-green);
   transform: translate(-50%, -50%) rotate(45deg);
   transform-origin: center;
+}
+
+.education-list {
+  gap: 0;
+}
+
+.education-list .experience-item {
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 28px;
+  padding-bottom: 16px;
+}
+
+.education-list .experience-date {
+  padding-top: 2px;
+}
+
+.education-list .experience-body {
+  padding: 0 0 16px;
+  border-bottom: 0;
+}
+
+.education-list .experience-body h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 7px;
+  margin-bottom: 4px;
+  font-size: 24px;
+}
+
+.education-school {
+  color: var(--neutral-500);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.education-note {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 .experience-date {
@@ -506,6 +552,10 @@ p {
   color: var(--neutral-500);
   font-style: italic;
   font-weight: 700;
+}
+
+.experience-company + .clean-list {
+  padding-top: 5px;
 }
 
 .experience-body .tag-list {
@@ -606,6 +656,12 @@ p {
 
   .education-list .experience-item::after {
     left: 10px;
+  }
+
+  .education-list .experience-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding-left: 0;
   }
 
   .simple-list article {
@@ -782,19 +838,25 @@ p {
   }
 
   .experience-list::before {
-    left: 43mm;
+    left: 31mm;
+  }
+
+  .experience-list {
+    margin-left: 0;
+    padding-left: 0;
   }
 
   .experience-item {
-    grid-template-columns: 38mm minmax(0, 1fr);
-    gap: 8mm;
+    grid-template-columns: 29mm minmax(0, 1fr);
+    gap: 3mm;
     padding-bottom: 9px;
     break-inside: avoid;
     page-break-inside: avoid;
   }
 
   .experience-item::before {
-    left: 43mm;
+    top: 4px;
+    left: 31mm;
     width: 9px;
     height: 9px;
     border-width: 2px;
@@ -806,9 +868,9 @@ p {
   }
 
   .education-list .experience-item::after {
-    display: block;
-    top: 13px;
-    left: 43mm;
+    display: none;
+    top: 9px;
+    left: 31mm;
     width: 3px;
     height: 6px;
     border-right-width: 1.5px;
@@ -817,22 +879,69 @@ p {
   }
 
   .experience-date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 29mm;
     gap: 3px;
     font-size: 6.3pt;
+    justify-self: start;
     justify-items: start;
+    text-align: left;
   }
 
   .experience-date span {
+    display: block;
+    justify-self: start;
     white-space: nowrap;
   }
 
   .experience-date strong {
+    justify-self: start;
     padding: 2px 4px;
     font-size: 6.5pt;
   }
 
   .experience-body {
+    grid-column: 2;
     padding: 0 0 7px;
+  }
+
+  .education-list {
+    gap: 0;
+  }
+
+  .education-list .experience-item {
+    grid-template-columns: 30mm minmax(0, 1fr);
+    gap: 4mm;
+    padding-bottom: 5px;
+  }
+
+  .education-list .experience-date {
+    position: static;
+    width: auto;
+    grid-column: 1;
+    padding-top: 0;
+    font-size: 6.2pt;
+  }
+
+  .education-list .experience-body {
+    grid-column: 2;
+    padding: 0 0 5px;
+  }
+
+  .education-list .experience-body h3 {
+    margin-bottom: 1px;
+    font-size: 9.2pt;
+  }
+
+  .education-school {
+    font-size: 7.2pt;
+  }
+
+  .education-note {
+    font-size: 7.2pt;
+    line-height: 1.2;
   }
 
   .experience-body h3 {
@@ -842,6 +951,10 @@ p {
 
   .experience-company {
     margin-bottom: 2px;
+  }
+
+  .experience-company + .clean-list {
+    padding-top: 2px;
   }
 
   .experience-body .tag-list {
